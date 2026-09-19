@@ -1,4 +1,4 @@
-# phantomfhe_revised
+# phantom-fhe_revised
 
 GPU-accelerated CKKS implementation with bootstrapping support, targeting machine learning workloads.
 
