@@ -1,0 +1,1 @@
+ -Wl,-rpath,/home/sandia/.conda/envs/phantom/lib: /home/sandia/.conda/envs/phantom/lib/libpython3.12.so -lcudadevrt -lcudart_static -lrt -lpthread -ldl 
