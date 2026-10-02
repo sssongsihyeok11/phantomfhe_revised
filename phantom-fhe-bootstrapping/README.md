@@ -1,24 +1,110 @@
-# PhantomFHE: A CUDA-Accelerated Fully Homomorphic Encryption Library
+# phantom-fhe-bootstrapping
 
-> [!IMPORTANT]  
-> This is a research project and is not intended for production use. We are actively working on improving the
-> performance and usability of this library. If you have any questions or suggestions, please feel free to open an issue
-> or contact us.
+A CUDA-accelerated CKKS bootstrapping implementation based on PhantomFHE, with C++ examples and Python bindings.
 
-> [!WARNING]  
-> This project has been tested on Tesla A100 40G/80G, GTX 3080Ti/3090Ti/4090, AGX Xavier. Other GPUs may have
-> compatibility issues and may not give correct results.
+This document covers installation and building. See the [execution guide](RUNNING.md) for commands to run the examples and explanations of their output.
 
-## Documentation
+## 1. Prerequisites
 
-Please read [https://encryptorion-lab.gitbook.io/phantom-fhe/](https://encryptorion-lab.gitbook.io/phantom-fhe/) for
-detailed instructions and explanations.
+- Linux and an NVIDIA GPU
+- NVIDIA GPU driver and CUDA Toolkit, including `nvcc`
+- A C++17 compiler compatible with your CUDA Toolkit
+- CMake: the project requires at least 3.20. Use 3.24 or later for the `native` GPU architecture detection used below.
+- Git and Make or Ninja
+- Python 3.9 or later and Python development headers for the Python examples
 
-## Features
+The default bootstrapping examples use a ring dimension of `2^16` and `2^15` slots. Keys and precomputed data require substantial GPU memory; memory usage depends on the parameters.
 
-* Native GPU acceleration (for NVIDIA GPUs)
-* Support word-wise schemes including BGV, BFV, and CKKS (without bootstrapping)
-* Easy to integrate with applications (PPML, etc.)
+On Ubuntu/Debian, install the basic build tools:
+
+```bash
+sudo apt-get update
+sudo apt-get install -y build-essential git cmake python3-dev python3-venv
+```
+
+Install the CUDA Toolkit and GPU driver separately, then check your environment:
+
+```bash
+nvidia-smi
+nvcc --version
+cmake --version
+```
+
+The CUDA version shown by `nvidia-smi` may differ from the installed Toolkit version, so check `nvcc` as well.
+
+## 2. Get the source
+
+```bash
+git clone --recursive https://github.com/sssongsihyeok11/phantomfhe_revised.git phantom-fhe-bootstrapping
+cd phantom-fhe-bootstrapping
+```
+
+Run all subsequent commands from the repository root. If you already have the source, change to that directory.
+
+## 3. Build the C++ library and bootstrapping example
+
+```bash
+cmake -S . -B build-bootstrap \
+  -DCMAKE_BUILD_TYPE=Release \
+  -DCMAKE_CUDA_ARCHITECTURES=native \
+  -DPHANTOM_ENABLE_BOOTSTRAP=ON \
+  -DPHANTOM_ENABLE_EXAMPLE=OFF \
+  -DPHANTOM_ENABLE_BENCH=OFF \
+  -DPHANTOM_ENABLE_TEST=OFF \
+  -DPHANTOM_ENABLE_PYTHON_BINDING=OFF
+
+cmake --build build-bootstrap --target bootstrap -j 4
+```
+
+Build outputs:
+
+- `build-bootstrap/lib/libPhantom.so`: shared library
+- `build-bootstrap/bin/bootstrap`: C++ bootstrapping executable
+
+You can run the example directly from the build directory without installing it system-wide. See [Running the C++ example](RUNNING.md#cpp).
+
+## 4. Build the Python bindings (optional)
+
+The bindings use the source in `python/pybind11`. Make sure `python/pybind11/CMakeLists.txt` exists. If your checkout tracks this directory as a submodule and the file is missing, run `git submodule update --init --recursive`.
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+
+cmake -S . -B build-python \
+  -DCMAKE_BUILD_TYPE=Release \
+  -DCMAKE_CUDA_ARCHITECTURES=native \
+  -DPHANTOM_ENABLE_BOOTSTRAP=ON \
+  -DPHANTOM_ENABLE_EXAMPLE=OFF \
+  -DPHANTOM_ENABLE_BENCH=OFF \
+  -DPHANTOM_ENABLE_TEST=OFF \
+  -DPHANTOM_ENABLE_PYTHON_BINDING=ON \
+  -DPYTHON_EXECUTABLE="$(command -v python)" \
+  -DPython_EXECUTABLE="$(command -v python)"
+
+cmake --build build-python --target pyPhantom -j 4
+```
+
+The build places the `pyPhantom` extension and `libPhantom.so` in `build-python/lib`. The example requires no additional Python packages beyond the extension and the Python standard library.
+
+Set the module and library paths, then verify the import. Activate the environment and set these paths again when opening a new terminal.
+
+```bash
+source .venv/bin/activate
+export PYTHONPATH="$PWD/build-python/lib${PYTHONPATH:+:$PYTHONPATH}"
+export LD_LIBRARY_PATH="$PWD/build-python/lib${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+python -c "import pyPhantom; print(pyPhantom.__file__)"
+```
+
+See [Running the Python example](RUNNING.md#python) to execute bootstrapping.
+
+## 5. Build troubleshooting
+
+- **`nvcc` not found:** Add the CUDA Toolkit's `bin` directory to `PATH`, or pass `-DCMAKE_CUDA_COMPILER=/path/to/cuda/bin/nvcc` to CMake.
+- **GPU architecture detection fails:** Configure on a machine where the GPU is visible, or replace `-DCMAKE_CUDA_ARCHITECTURES=native` with the target GPU's architecture number. The installed Toolkit must support that architecture.
+- **Out of memory during compilation:** Reduce build parallelism to `-j 2` or `-j 1`.
+- **Missing Python headers or pybind11:** Check that Python development headers and `python/pybind11/CMakeLists.txt` are present.
+- **Changed compiler or Python environment:** Configure in a new build directory to avoid reusing an incompatible CMake cache.
 
 ## License
 
@@ -72,10 +158,3 @@ If you are exploring BFV optimizations, please also cite the following paper:
 }
 ```
 
-## Roadmap
-
-We are planning to support the following features in the future:
-
-* [ ] support bootstrapping for BFV/BGV/CKKS
-* [x] support bit-wise schemes FHEW/TFHE (will not be open-sourced)
-* [ ] support scheme switching (will not be open-sourced)
