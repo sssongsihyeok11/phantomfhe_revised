@@ -18,6 +18,4 @@ Relinearization and key switching
 
 Modulus switching and rescaling
 
-Rotation and Galois automorphisms(Hoisting)
-
 If you are looking for a more in-depth or mathematically rigorous explanation, I strongly recommend reading the original papers and related literature rather than relying solely on these notes.
