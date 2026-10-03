@@ -251,3 +251,113 @@ void DRNSBase::compose_array(cuDoubleComplex *dst, const uint64_t *src, const ui
             big_modulus(), big_qiHat(), QHatInvModq(), QHatInvModq_shoup(),
             upper_half_threshold, inv_scale, coeff_count);
 }
+
+__global__ void decompose_coeff_encoding_kernel(uint64_t *dst, const double *src, const DModulus *modulus, 
+                                                uint32_t poly_degree, double scale){
+    
+    size_t tid = blockIdx.x * blockDim.x + threadIdx.x;
+    size_t twr = tid / poly_degree;
+    size_t coeff_id = tid % poly_degree;
+    DModulus mod = modulus[twr];
+
+    __int128_t coeff = round(scale * src[coeff_id]);
+    bool is_negative = coeff < 0;
+    __uint128_t coeffd = is_negative ? static_cast<__uint128_t>(-coeff) : static_cast<__uint128_t>(coeff);
+    uint64_t coeffu_low = static_cast<uint64_t>(coeffd);
+    uint64_t coeffu_high = static_cast<uint64_t>(coeffd >> 64);
+
+    uint64_t temp = barrett_reduce_uint128_uint64({coeffu_high, coeffu_low}, mod.value(), mod.const_ratio());
+    if (is_negative) {
+        temp = mod.value() - temp;
+    }
+
+    dst[tid] = temp;
+
+}
+void DRNSBase::coefficient_decompose_array(uint64_t *dst, const double *src, uint32_t poly_degree, 
+                                           double scale, const cudaStream_t &stream) const {
+    uint32_t gridDimGlb = poly_degree * size() / blockDimGlb.x;
+
+    decompose_coeff_encoding_kernel<<<gridDimGlb, blockDimGlb, 0, stream>>>(dst, src, base(), poly_degree, scale);
+}
+
+__global__ void coefficient_compose_array_kernel(double *dst, uint64_t *temp_prod_array, uint64_t *acc_mod_array,
+                                     const uint64_t *src, const uint32_t size, const DModulus *base_q,
+                                     const uint64_t *base_prod, const uint64_t *punctured_prod_array,
+                                     const uint64_t *inv_punctured_prod_mod_base_array,
+                                     const uint64_t *inv_punctured_prod_mod_base_array_shoup,
+                                     const uint64_t *upper_half_threshold, const double inv_scale,
+                                     const uint32_t coeff_count) {
+    size_t slot_count = coeff_count >> 1;
+    for (size_t tid = blockIdx.x * blockDim.x + threadIdx.x;
+         tid < coeff_count; tid += blockDim.x * gridDim.x) {
+        if (size > 1) {
+            uint64_t prod;
+
+            for (uint32_t i = 0; i < size; i++) {
+                // [a[j] * hat(q)_j^(-1)]_(q_j)
+                prod = multiply_and_reduce_shoup(src[tid + i * coeff_count],
+                                                 inv_punctured_prod_mod_base_array[i],
+                                                 inv_punctured_prod_mod_base_array_shoup[i], base_q[i].value());
+
+                // * hat(q)_j over ZZ
+                multiply_uint_uint64(punctured_prod_array + i * size, size, // operand1 and size
+                                     prod, // operand2 with uint64_t
+                                     temp_prod_array + tid * size); // result and size
+
+                // accumulation and mod Q over ZZ
+                add_uint_uint_mod(temp_prod_array + tid * size, acc_mod_array + tid * size, base_prod, size,
+                                  acc_mod_array + tid * size);
+            }
+        } else {
+            acc_mod_array[tid] = src[tid];
+            //debug_error[tid] = src[tid];
+        }
+
+        // Create floating-point representations of the multi-precision integer coefficients
+        // Scaling instead incorporated above; this can help in cases
+        // where otherwise pow(two_pow_64, j) would overflow due to very
+        // large coeff_modulus_size and very large scale
+        // res[i] = res_accum * inv_scale;
+        double res = 0.0;
+        double scaled_two_pow_64 = inv_scale;
+        uint64_t diff;
+        
+        if (is_greater_than_or_equal_uint(acc_mod_array + tid * size, upper_half_threshold, size)) {
+            for (uint32_t i = 0; i < size; i++, scaled_two_pow_64 *= two_pow_64_dev) {
+                if (acc_mod_array[tid * size + i] > base_prod[i]) {
+                    diff = acc_mod_array[tid * size + i] - base_prod[i];
+                    //debug_error[tid * size + i] = static_cast<int64_t>(diff);
+                    res += diff ? static_cast<double>(diff) * scaled_two_pow_64 : 0.0;
+                } else {
+                    diff = base_prod[i] - acc_mod_array[tid * size + i];
+                    //debug_error[tid * size + i] = static_cast<int64_t>(-diff);
+                    res -= diff ? static_cast<double>(diff) * scaled_two_pow_64 : 0.0;
+                }
+
+            }
+        } else {
+            for (size_t i = 0; i < size; i++, scaled_two_pow_64 *= two_pow_64_dev) {
+                diff = acc_mod_array[tid * size + i];
+                res += diff ? static_cast<double>(diff) * scaled_two_pow_64 : 0.0;
+            }
+        }
+
+        dst[tid] = res;
+    }
+}
+
+void DRNSBase::coefficient_compose_array(double *dst, const uint64_t *src, const uint64_t *upper_half_threshold,
+                             const double inv_scale, const uint32_t coeff_count, const cudaStream_t &stream) const {
+    uint32_t rns_poly_uint64_count = coeff_count * size();
+    auto temp_prod_array = make_cuda_auto_ptr<uint64_t>(rns_poly_uint64_count, stream);
+    auto acc_mod_array = make_cuda_auto_ptr<uint64_t>(rns_poly_uint64_count, stream);
+    cudaMemsetAsync(acc_mod_array.get(), 0, rns_poly_uint64_count * sizeof(uint64_t), stream);
+
+    uint64_t gridDimGlb = coeff_count / blockDimGlb.x;
+    //printf("size = %u\n", size());
+    coefficient_compose_array_kernel<<<gridDimGlb, blockDimGlb, 0, stream>>>(
+            dst, temp_prod_array.get(), acc_mod_array.get(), src, size(), base(),
+            big_modulus(), big_qiHat(), QHatInvModq(), QHatInvModq_shoup(),
+            upper_half_threshold, inv_scale, coeff_count);
+}

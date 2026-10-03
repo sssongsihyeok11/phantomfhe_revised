@@ -114,9 +114,38 @@ PYBIND11_MODULE(pyPhantom, m) {
                  py::arg(), py::arg())
             .def("decode_double_vector",
                  py::overload_cast<const PhantomContext &, const PhantomPlaintext &>(
-                         &PhantomCKKSEncoder::decode<double>), py::arg(), py::arg());
+                         &PhantomCKKSEncoder::decode<double>), py::arg(), py::arg())
+            .def("coefficient_encode", [](PhantomCKKSEncoder &self, const PhantomContext &context,
+                                                py::array_t<double> values, double scale, size_t chain_index) {
+                py::buffer_info buf = values.request();
+                if (buf.ndim != 1) throw std::runtime_error("Input must be 1-D numpy array");
+    
+                double *ptr = static_cast<double *>(buf.ptr);
+                size_t count = buf.shape[0];
+                PhantomPlaintext destination;
+                self.coefficient_encode(context, ptr, count, scale, chain_index, destination);
+                return destination;}, py::arg("context"), py::arg("values"), py::arg("scale"), py::arg("chain_index"))
+            .def("coefficient_encode_ntt", [](PhantomCKKSEncoder &self, const PhantomContext &context,
+                                                py::array_t<double> values, double scale, size_t chain_index) {
+                py::buffer_info buf = values.request();
+                if (buf.ndim != 1) throw std::runtime_error("Input must be 1-D numpy array");
+    
+                double *ptr = static_cast<double *>(buf.ptr);
+                size_t count = buf.shape[0];
+                PhantomPlaintext destination;
+                self.coefficient_encode_ntt(context, ptr, count, scale, chain_index, destination);
+                return destination;}, py::arg("context"), py::arg("values"), py::arg("scale"), py::arg("chain_index"))
+             .def("coefficient_decode_and_mult", [](PhantomCKKSEncoder &self, const PhantomContext &context,
+                                                const PhantomPlaintext &plaintext, double scalar) {
+                size_t count = context.poly_degree_;
+    
+                auto result_array = py::array_t<double>(count);
+                py::buffer_info buf = result_array.request();
+                double* ptr = static_cast<double*>(buf.ptr);
+                self.coefficient_decode_and_mult(context, plaintext, ptr, scalar);
 
- 
+                return result_array;
+            }, py::arg("context"), py::arg("plaintext"), py::arg("scalar"));
 
     py::class_<PhantomPlaintext>(m, "plaintext")
             .def(py::init<>());
@@ -182,6 +211,19 @@ PYBIND11_MODULE(pyPhantom, m) {
 
 
     m.def("relinearize", &phantom::relinearize, py::arg(), py::arg(), py::arg());
+    m.def("benchmark_relinearize", [](const PhantomContext &context,
+                                      const PhantomCiphertext &encrypted,
+                                      const PhantomRelinKey &keys) {
+        phantom::RelinearizationTiming timing;
+        PhantomCiphertext result = encrypted;
+        phantom::relinearize_inplace(context, result, keys, &timing);
+        auto values = timing.milliseconds();
+        // Complete final additions and resize before returning.
+        auto status = cudaStreamSynchronize(cudaStreamPerThread);
+        if (status != cudaSuccess) throw std::runtime_error(cudaGetErrorString(status));
+        return py::make_tuple(std::move(result), values);
+    }, py::arg("context"), py::arg("encrypted"), py::arg("keys"),
+       "Return ciphertext and CUDA event milliseconds: modup, inner product, moddown c0, moddown c1.");
 
     m.def("rescale_to_next", &phantom::rescale_to_next, py::arg(), py::arg());
 

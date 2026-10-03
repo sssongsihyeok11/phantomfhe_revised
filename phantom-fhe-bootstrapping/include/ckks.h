@@ -233,7 +233,15 @@ public:
         encode(context, values, scale, destination, chain_index);
         return destination;
     }
-
+    void coefficient_encode(
+        const PhantomContext &context, const double* values, size_t coeff_count,         
+        double scale, size_t chain_index, PhantomPlaintext &destination);
+    void coefficient_encode_ntt( 
+        const PhantomContext &context, const double* values, size_t coeff_count,         
+        double scale, size_t chain_index, PhantomPlaintext &destination);
+      
+    void coefficient_decode_and_mult(const PhantomContext &context, const PhantomPlaintext &plain, 
+                                             double *destination, double scalar = 1.0);
     template <class T>
     [[nodiscard]] inline auto encode_ext(const PhantomContext &context, const std::vector<T> &values,
                                          double scale,

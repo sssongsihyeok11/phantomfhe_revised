@@ -47,5 +47,10 @@ namespace phantom::arith {
 
         void compose_array(cuDoubleComplex *dst, const uint64_t *src, const uint64_t *upper_half_threshold,
                            double inv_scale, uint32_t coeff_count, const cudaStream_t &stream) const;
+        
+        void coefficient_decompose_array(uint64_t *dst, const double *src, uint32_t coeff_count, double scale,const cudaStream_t &stream) const;
+        void coefficient_compose_array(double *dst, const uint64_t *src, const uint64_t *upper_half_threshold,
+                           double inv_scale, uint32_t coeff_count, const cudaStream_t &stream) const;
+
     };
 }

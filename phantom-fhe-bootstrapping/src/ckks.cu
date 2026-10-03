@@ -667,3 +667,92 @@ void PhantomCKKSEncoder::decode_internal_ext(const PhantomContext &context, cons
     // explicit synchronization in case user wants to use the result immediately
     cudaStreamSynchronize(stream);
 }
+
+void PhantomCKKSEncoder::coefficient_encode(const PhantomContext &context, const double* values, size_t coeff_count, 
+                                                    double scale, size_t chain_index, PhantomPlaintext &destination)
+{
+    const auto &s = cudaStreamPerThread;
+    
+    //destination.chain_index_ = 0;
+    destination.resize(context.coeff_mod_size_, context.poly_degree_, s);
+
+    cudaMemcpyAsync(gpu_ckks_msg_vec_->coeff_encode_in(), values, coeff_count * sizeof(double), cudaMemcpyHostToDevice, s);
+    
+    auto &context_data = context.get_context_data(chain_index);
+    auto &rns_tool = context_data.gpu_rns_tool();
+    rns_tool.base_Ql().coefficient_decompose_array(destination.data(), gpu_ckks_msg_vec_->coeff_encode_in(), coeff_count, scale, s);
+
+    destination.chain_index_ = chain_index;
+    destination.scale_ = scale;
+}
+
+void PhantomCKKSEncoder::coefficient_encode_ntt(const PhantomContext &context, const double* values, size_t coeff_count,
+                                                            double scale, size_t chain_index, PhantomPlaintext &destination)
+{
+    const auto &s = cudaStreamPerThread;
+    
+    destination.chain_index_ = 0;
+    destination.resize(context.coeff_mod_size_, context.poly_degree_, s);
+
+    cudaMemcpyAsync(gpu_ckks_msg_vec_->coeff_encode_in(), values, coeff_count * sizeof(double), cudaMemcpyHostToDevice, s);
+
+    auto &context_data = context.get_context_data(chain_index);
+    auto &rns_tool = context_data.gpu_rns_tool();
+    rns_tool.base_Ql().coefficient_decompose_array(destination.data(), gpu_ckks_msg_vec_->coeff_encode_in(), coeff_count, scale, s);
+
+    nwt_2d_radix8_forward_inplace(destination.data(), context.gpu_rns_tables(), context_data.parms().coeff_modulus().size(), 0, s);
+    destination.chain_index_ = chain_index;
+    destination.scale_ = scale;
+}
+
+void PhantomCKKSEncoder::coefficient_decode_and_mult(const PhantomContext &context, const PhantomPlaintext &plain,
+                                         double *destination, double scalar) {
+    
+    const auto &stream = cudaStreamPerThread;
+    auto &context_data = context.get_context_data(plain.chain_index_);
+    auto &parms = context_data.parms();
+    auto &coeff_modulus = parms.coeff_modulus();
+    auto &rns_tool = context_data.gpu_rns_tool();
+    const size_t coeff_modulus_size = coeff_modulus.size();
+    const size_t coeff_count = parms.poly_modulus_degree();
+    size_t log_slot_count = arith::get_power_of_two(slots_);
+    const size_t rns_poly_uint64_count = coeff_count * coeff_modulus_size;
+    //auto coeff_buf = phantom::util::make_cuda_auto_ptr<double>(coeff_count, stream);
+
+    if (plain.scale() <= 0 ||
+        (static_cast<int>(log2(plain.scale())) >= context_data.total_coeff_modulus_bit_count())) {
+        throw std::invalid_argument("scale out of bounds");
+    }
+
+    auto upper_half_threshold = context_data.upper_half_threshold();
+    int logn = arith::get_power_of_two(coeff_count);
+    auto gpu_upper_half_threshold = make_cuda_auto_ptr<uint64_t>(upper_half_threshold.size(), stream);
+    cudaMemcpyAsync(gpu_upper_half_threshold.get(), upper_half_threshold.data(),
+                    upper_half_threshold.size() * sizeof(uint64_t), cudaMemcpyHostToDevice, stream);
+
+ 
+    if ((logn < 0) || (coeff_count < POLY_MOD_DEGREE_MIN) || (coeff_count > POLY_MOD_DEGREE_MAX)) {
+        throw std::logic_error("invalid parameters");
+    }
+
+    double inv_scale = (double(1.0) /  plain.scale());
+    inv_scale *= 1/scalar;
+
+    // CKKS plaintexts produced by encryption/decryption are in NTT form.
+    // Decode a copy so repeated decoding does not change the input plaintext.
+    auto plain_copy = make_cuda_auto_ptr<uint64_t>(rns_poly_uint64_count, stream);
+    cudaMemcpyAsync(plain_copy.get(), plain.data(), rns_poly_uint64_count * sizeof(uint64_t),
+                    cudaMemcpyDeviceToDevice, stream);
+    nwt_2d_radix8_backward_inplace(plain_copy.get(), context.gpu_rns_tables(), coeff_modulus_size, 0, stream);
+
+ 
+
+    rns_tool.base_Ql().coefficient_compose_array(gpu_ckks_msg_vec_->coeff_encode_in(), plain_copy.get(), gpu_upper_half_threshold.get(),
+                                     inv_scale, coeff_count, stream);
+
+
+    cudaMemcpyAsync(destination, gpu_ckks_msg_vec_->coeff_encode_in(), coeff_count * sizeof(double), cudaMemcpyDeviceToHost, stream);
+
+    // explicit synchronization in case user wants to use the result immediately
+    cudaStreamSynchronize(stream);
+}
