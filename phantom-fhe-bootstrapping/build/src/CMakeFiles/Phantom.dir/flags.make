@@ -6,5 +6,5 @@ CUDA_DEFINES = -DPHANTOM_USE_CUDA_PTX -DPhantom_EXPORTS
 
 CUDA_INCLUDES = --options-file CMakeFiles/Phantom.dir/includes_CUDA.rsp
 
-CUDA_FLAGS = -std=c++17 "--generate-code=arch=compute_80,code=[compute_80,sm_80]" -Xcompiler=-fPIC --default-stream per-thread
+CUDA_FLAGS = -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2 -O3 -DNDEBUG -std=c++17 "--generate-code=arch=compute_80,code=[compute_80,sm_80]" -Xcompiler=-fPIC --default-stream per-thread
 

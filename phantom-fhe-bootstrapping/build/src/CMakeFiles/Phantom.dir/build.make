@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sandia/codex/phantom-fhe
+CMAKE_SOURCE_DIR = /home/sandia/codex/phantom-fhe-bootstrapping
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sandia/codex/phantom-fhe/build
+CMAKE_BINARY_DIR = /home/sandia/codex/phantom-fhe-bootstrapping/build
 
 # Include any dependencies generated for this target.
 include src/CMakeFiles/Phantom.dir/depend.make
@@ -71,10 +71,10 @@ include src/CMakeFiles/Phantom.dir/flags.make
 
 src/CMakeFiles/Phantom.dir/context.cu.o: src/CMakeFiles/Phantom.dir/flags.make
 src/CMakeFiles/Phantom.dir/context.cu.o: src/CMakeFiles/Phantom.dir/includes_CUDA.rsp
-src/CMakeFiles/Phantom.dir/context.cu.o: /home/sandia/codex/phantom-fhe/src/context.cu
+src/CMakeFiles/Phantom.dir/context.cu.o: /home/sandia/codex/phantom-fhe-bootstrapping/src/context.cu
 src/CMakeFiles/Phantom.dir/context.cu.o: src/CMakeFiles/Phantom.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CUDA object src/CMakeFiles/Phantom.dir/context.cu.o"
-	cd /home/sandia/codex/phantom-fhe/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/context.cu.o -MF CMakeFiles/Phantom.dir/context.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe/src/context.cu -o CMakeFiles/Phantom.dir/context.cu.o
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe-bootstrapping/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CUDA object src/CMakeFiles/Phantom.dir/context.cu.o"
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/context.cu.o -MF CMakeFiles/Phantom.dir/context.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe-bootstrapping/src/context.cu -o CMakeFiles/Phantom.dir/context.cu.o
 
 src/CMakeFiles/Phantom.dir/context.cu.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CUDA source to CMakeFiles/Phantom.dir/context.cu.i"
@@ -86,10 +86,10 @@ src/CMakeFiles/Phantom.dir/context.cu.s: cmake_force
 
 src/CMakeFiles/Phantom.dir/batchencoder.cu.o: src/CMakeFiles/Phantom.dir/flags.make
 src/CMakeFiles/Phantom.dir/batchencoder.cu.o: src/CMakeFiles/Phantom.dir/includes_CUDA.rsp
-src/CMakeFiles/Phantom.dir/batchencoder.cu.o: /home/sandia/codex/phantom-fhe/src/batchencoder.cu
+src/CMakeFiles/Phantom.dir/batchencoder.cu.o: /home/sandia/codex/phantom-fhe-bootstrapping/src/batchencoder.cu
 src/CMakeFiles/Phantom.dir/batchencoder.cu.o: src/CMakeFiles/Phantom.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CUDA object src/CMakeFiles/Phantom.dir/batchencoder.cu.o"
-	cd /home/sandia/codex/phantom-fhe/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/batchencoder.cu.o -MF CMakeFiles/Phantom.dir/batchencoder.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe/src/batchencoder.cu -o CMakeFiles/Phantom.dir/batchencoder.cu.o
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe-bootstrapping/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CUDA object src/CMakeFiles/Phantom.dir/batchencoder.cu.o"
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/batchencoder.cu.o -MF CMakeFiles/Phantom.dir/batchencoder.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe-bootstrapping/src/batchencoder.cu -o CMakeFiles/Phantom.dir/batchencoder.cu.o
 
 src/CMakeFiles/Phantom.dir/batchencoder.cu.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CUDA source to CMakeFiles/Phantom.dir/batchencoder.cu.i"
@@ -101,10 +101,10 @@ src/CMakeFiles/Phantom.dir/batchencoder.cu.s: cmake_force
 
 src/CMakeFiles/Phantom.dir/prng.cu.o: src/CMakeFiles/Phantom.dir/flags.make
 src/CMakeFiles/Phantom.dir/prng.cu.o: src/CMakeFiles/Phantom.dir/includes_CUDA.rsp
-src/CMakeFiles/Phantom.dir/prng.cu.o: /home/sandia/codex/phantom-fhe/src/prng.cu
+src/CMakeFiles/Phantom.dir/prng.cu.o: /home/sandia/codex/phantom-fhe-bootstrapping/src/prng.cu
 src/CMakeFiles/Phantom.dir/prng.cu.o: src/CMakeFiles/Phantom.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CUDA object src/CMakeFiles/Phantom.dir/prng.cu.o"
-	cd /home/sandia/codex/phantom-fhe/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/prng.cu.o -MF CMakeFiles/Phantom.dir/prng.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe/src/prng.cu -o CMakeFiles/Phantom.dir/prng.cu.o
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe-bootstrapping/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CUDA object src/CMakeFiles/Phantom.dir/prng.cu.o"
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/prng.cu.o -MF CMakeFiles/Phantom.dir/prng.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe-bootstrapping/src/prng.cu -o CMakeFiles/Phantom.dir/prng.cu.o
 
 src/CMakeFiles/Phantom.dir/prng.cu.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CUDA source to CMakeFiles/Phantom.dir/prng.cu.i"
@@ -116,10 +116,10 @@ src/CMakeFiles/Phantom.dir/prng.cu.s: cmake_force
 
 src/CMakeFiles/Phantom.dir/polymath.cu.o: src/CMakeFiles/Phantom.dir/flags.make
 src/CMakeFiles/Phantom.dir/polymath.cu.o: src/CMakeFiles/Phantom.dir/includes_CUDA.rsp
-src/CMakeFiles/Phantom.dir/polymath.cu.o: /home/sandia/codex/phantom-fhe/src/polymath.cu
+src/CMakeFiles/Phantom.dir/polymath.cu.o: /home/sandia/codex/phantom-fhe-bootstrapping/src/polymath.cu
 src/CMakeFiles/Phantom.dir/polymath.cu.o: src/CMakeFiles/Phantom.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CUDA object src/CMakeFiles/Phantom.dir/polymath.cu.o"
-	cd /home/sandia/codex/phantom-fhe/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/polymath.cu.o -MF CMakeFiles/Phantom.dir/polymath.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe/src/polymath.cu -o CMakeFiles/Phantom.dir/polymath.cu.o
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe-bootstrapping/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CUDA object src/CMakeFiles/Phantom.dir/polymath.cu.o"
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/polymath.cu.o -MF CMakeFiles/Phantom.dir/polymath.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe-bootstrapping/src/polymath.cu -o CMakeFiles/Phantom.dir/polymath.cu.o
 
 src/CMakeFiles/Phantom.dir/polymath.cu.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CUDA source to CMakeFiles/Phantom.dir/polymath.cu.i"
@@ -131,10 +131,10 @@ src/CMakeFiles/Phantom.dir/polymath.cu.s: cmake_force
 
 src/CMakeFiles/Phantom.dir/secretkey.cu.o: src/CMakeFiles/Phantom.dir/flags.make
 src/CMakeFiles/Phantom.dir/secretkey.cu.o: src/CMakeFiles/Phantom.dir/includes_CUDA.rsp
-src/CMakeFiles/Phantom.dir/secretkey.cu.o: /home/sandia/codex/phantom-fhe/src/secretkey.cu
+src/CMakeFiles/Phantom.dir/secretkey.cu.o: /home/sandia/codex/phantom-fhe-bootstrapping/src/secretkey.cu
 src/CMakeFiles/Phantom.dir/secretkey.cu.o: src/CMakeFiles/Phantom.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CUDA object src/CMakeFiles/Phantom.dir/secretkey.cu.o"
-	cd /home/sandia/codex/phantom-fhe/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/secretkey.cu.o -MF CMakeFiles/Phantom.dir/secretkey.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe/src/secretkey.cu -o CMakeFiles/Phantom.dir/secretkey.cu.o
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe-bootstrapping/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CUDA object src/CMakeFiles/Phantom.dir/secretkey.cu.o"
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/secretkey.cu.o -MF CMakeFiles/Phantom.dir/secretkey.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe-bootstrapping/src/secretkey.cu -o CMakeFiles/Phantom.dir/secretkey.cu.o
 
 src/CMakeFiles/Phantom.dir/secretkey.cu.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CUDA source to CMakeFiles/Phantom.dir/secretkey.cu.i"
@@ -146,10 +146,10 @@ src/CMakeFiles/Phantom.dir/secretkey.cu.s: cmake_force
 
 src/CMakeFiles/Phantom.dir/rns.cu.o: src/CMakeFiles/Phantom.dir/flags.make
 src/CMakeFiles/Phantom.dir/rns.cu.o: src/CMakeFiles/Phantom.dir/includes_CUDA.rsp
-src/CMakeFiles/Phantom.dir/rns.cu.o: /home/sandia/codex/phantom-fhe/src/rns.cu
+src/CMakeFiles/Phantom.dir/rns.cu.o: /home/sandia/codex/phantom-fhe-bootstrapping/src/rns.cu
 src/CMakeFiles/Phantom.dir/rns.cu.o: src/CMakeFiles/Phantom.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CUDA object src/CMakeFiles/Phantom.dir/rns.cu.o"
-	cd /home/sandia/codex/phantom-fhe/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/rns.cu.o -MF CMakeFiles/Phantom.dir/rns.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe/src/rns.cu -o CMakeFiles/Phantom.dir/rns.cu.o
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe-bootstrapping/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CUDA object src/CMakeFiles/Phantom.dir/rns.cu.o"
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/rns.cu.o -MF CMakeFiles/Phantom.dir/rns.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe-bootstrapping/src/rns.cu -o CMakeFiles/Phantom.dir/rns.cu.o
 
 src/CMakeFiles/Phantom.dir/rns.cu.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CUDA source to CMakeFiles/Phantom.dir/rns.cu.i"
@@ -161,10 +161,10 @@ src/CMakeFiles/Phantom.dir/rns.cu.s: cmake_force
 
 src/CMakeFiles/Phantom.dir/rns_base.cu.o: src/CMakeFiles/Phantom.dir/flags.make
 src/CMakeFiles/Phantom.dir/rns_base.cu.o: src/CMakeFiles/Phantom.dir/includes_CUDA.rsp
-src/CMakeFiles/Phantom.dir/rns_base.cu.o: /home/sandia/codex/phantom-fhe/src/rns_base.cu
+src/CMakeFiles/Phantom.dir/rns_base.cu.o: /home/sandia/codex/phantom-fhe-bootstrapping/src/rns_base.cu
 src/CMakeFiles/Phantom.dir/rns_base.cu.o: src/CMakeFiles/Phantom.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CUDA object src/CMakeFiles/Phantom.dir/rns_base.cu.o"
-	cd /home/sandia/codex/phantom-fhe/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/rns_base.cu.o -MF CMakeFiles/Phantom.dir/rns_base.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe/src/rns_base.cu -o CMakeFiles/Phantom.dir/rns_base.cu.o
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe-bootstrapping/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CUDA object src/CMakeFiles/Phantom.dir/rns_base.cu.o"
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/rns_base.cu.o -MF CMakeFiles/Phantom.dir/rns_base.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe-bootstrapping/src/rns_base.cu -o CMakeFiles/Phantom.dir/rns_base.cu.o
 
 src/CMakeFiles/Phantom.dir/rns_base.cu.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CUDA source to CMakeFiles/Phantom.dir/rns_base.cu.i"
@@ -176,10 +176,10 @@ src/CMakeFiles/Phantom.dir/rns_base.cu.s: cmake_force
 
 src/CMakeFiles/Phantom.dir/rns_bconv.cu.o: src/CMakeFiles/Phantom.dir/flags.make
 src/CMakeFiles/Phantom.dir/rns_bconv.cu.o: src/CMakeFiles/Phantom.dir/includes_CUDA.rsp
-src/CMakeFiles/Phantom.dir/rns_bconv.cu.o: /home/sandia/codex/phantom-fhe/src/rns_bconv.cu
+src/CMakeFiles/Phantom.dir/rns_bconv.cu.o: /home/sandia/codex/phantom-fhe-bootstrapping/src/rns_bconv.cu
 src/CMakeFiles/Phantom.dir/rns_bconv.cu.o: src/CMakeFiles/Phantom.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CUDA object src/CMakeFiles/Phantom.dir/rns_bconv.cu.o"
-	cd /home/sandia/codex/phantom-fhe/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/rns_bconv.cu.o -MF CMakeFiles/Phantom.dir/rns_bconv.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe/src/rns_bconv.cu -o CMakeFiles/Phantom.dir/rns_bconv.cu.o
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe-bootstrapping/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CUDA object src/CMakeFiles/Phantom.dir/rns_bconv.cu.o"
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/rns_bconv.cu.o -MF CMakeFiles/Phantom.dir/rns_bconv.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe-bootstrapping/src/rns_bconv.cu -o CMakeFiles/Phantom.dir/rns_bconv.cu.o
 
 src/CMakeFiles/Phantom.dir/rns_bconv.cu.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CUDA source to CMakeFiles/Phantom.dir/rns_bconv.cu.i"
@@ -191,10 +191,10 @@ src/CMakeFiles/Phantom.dir/rns_bconv.cu.s: cmake_force
 
 src/CMakeFiles/Phantom.dir/scalingvariant.cu.o: src/CMakeFiles/Phantom.dir/flags.make
 src/CMakeFiles/Phantom.dir/scalingvariant.cu.o: src/CMakeFiles/Phantom.dir/includes_CUDA.rsp
-src/CMakeFiles/Phantom.dir/scalingvariant.cu.o: /home/sandia/codex/phantom-fhe/src/scalingvariant.cu
+src/CMakeFiles/Phantom.dir/scalingvariant.cu.o: /home/sandia/codex/phantom-fhe-bootstrapping/src/scalingvariant.cu
 src/CMakeFiles/Phantom.dir/scalingvariant.cu.o: src/CMakeFiles/Phantom.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CUDA object src/CMakeFiles/Phantom.dir/scalingvariant.cu.o"
-	cd /home/sandia/codex/phantom-fhe/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/scalingvariant.cu.o -MF CMakeFiles/Phantom.dir/scalingvariant.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe/src/scalingvariant.cu -o CMakeFiles/Phantom.dir/scalingvariant.cu.o
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe-bootstrapping/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CUDA object src/CMakeFiles/Phantom.dir/scalingvariant.cu.o"
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/scalingvariant.cu.o -MF CMakeFiles/Phantom.dir/scalingvariant.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe-bootstrapping/src/scalingvariant.cu -o CMakeFiles/Phantom.dir/scalingvariant.cu.o
 
 src/CMakeFiles/Phantom.dir/scalingvariant.cu.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CUDA source to CMakeFiles/Phantom.dir/scalingvariant.cu.i"
@@ -206,10 +206,10 @@ src/CMakeFiles/Phantom.dir/scalingvariant.cu.s: cmake_force
 
 src/CMakeFiles/Phantom.dir/evaluate.cu.o: src/CMakeFiles/Phantom.dir/flags.make
 src/CMakeFiles/Phantom.dir/evaluate.cu.o: src/CMakeFiles/Phantom.dir/includes_CUDA.rsp
-src/CMakeFiles/Phantom.dir/evaluate.cu.o: /home/sandia/codex/phantom-fhe/src/evaluate.cu
+src/CMakeFiles/Phantom.dir/evaluate.cu.o: /home/sandia/codex/phantom-fhe-bootstrapping/src/evaluate.cu
 src/CMakeFiles/Phantom.dir/evaluate.cu.o: src/CMakeFiles/Phantom.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CUDA object src/CMakeFiles/Phantom.dir/evaluate.cu.o"
-	cd /home/sandia/codex/phantom-fhe/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/evaluate.cu.o -MF CMakeFiles/Phantom.dir/evaluate.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe/src/evaluate.cu -o CMakeFiles/Phantom.dir/evaluate.cu.o
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe-bootstrapping/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CUDA object src/CMakeFiles/Phantom.dir/evaluate.cu.o"
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/evaluate.cu.o -MF CMakeFiles/Phantom.dir/evaluate.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe-bootstrapping/src/evaluate.cu -o CMakeFiles/Phantom.dir/evaluate.cu.o
 
 src/CMakeFiles/Phantom.dir/evaluate.cu.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CUDA source to CMakeFiles/Phantom.dir/evaluate.cu.i"
@@ -221,10 +221,10 @@ src/CMakeFiles/Phantom.dir/evaluate.cu.s: cmake_force
 
 src/CMakeFiles/Phantom.dir/fft.cu.o: src/CMakeFiles/Phantom.dir/flags.make
 src/CMakeFiles/Phantom.dir/fft.cu.o: src/CMakeFiles/Phantom.dir/includes_CUDA.rsp
-src/CMakeFiles/Phantom.dir/fft.cu.o: /home/sandia/codex/phantom-fhe/src/fft.cu
+src/CMakeFiles/Phantom.dir/fft.cu.o: /home/sandia/codex/phantom-fhe-bootstrapping/src/fft.cu
 src/CMakeFiles/Phantom.dir/fft.cu.o: src/CMakeFiles/Phantom.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CUDA object src/CMakeFiles/Phantom.dir/fft.cu.o"
-	cd /home/sandia/codex/phantom-fhe/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/fft.cu.o -MF CMakeFiles/Phantom.dir/fft.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe/src/fft.cu -o CMakeFiles/Phantom.dir/fft.cu.o
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe-bootstrapping/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CUDA object src/CMakeFiles/Phantom.dir/fft.cu.o"
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/fft.cu.o -MF CMakeFiles/Phantom.dir/fft.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe-bootstrapping/src/fft.cu -o CMakeFiles/Phantom.dir/fft.cu.o
 
 src/CMakeFiles/Phantom.dir/fft.cu.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CUDA source to CMakeFiles/Phantom.dir/fft.cu.i"
@@ -236,10 +236,10 @@ src/CMakeFiles/Phantom.dir/fft.cu.s: cmake_force
 
 src/CMakeFiles/Phantom.dir/ckks.cu.o: src/CMakeFiles/Phantom.dir/flags.make
 src/CMakeFiles/Phantom.dir/ckks.cu.o: src/CMakeFiles/Phantom.dir/includes_CUDA.rsp
-src/CMakeFiles/Phantom.dir/ckks.cu.o: /home/sandia/codex/phantom-fhe/src/ckks.cu
+src/CMakeFiles/Phantom.dir/ckks.cu.o: /home/sandia/codex/phantom-fhe-bootstrapping/src/ckks.cu
 src/CMakeFiles/Phantom.dir/ckks.cu.o: src/CMakeFiles/Phantom.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CUDA object src/CMakeFiles/Phantom.dir/ckks.cu.o"
-	cd /home/sandia/codex/phantom-fhe/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/ckks.cu.o -MF CMakeFiles/Phantom.dir/ckks.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe/src/ckks.cu -o CMakeFiles/Phantom.dir/ckks.cu.o
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe-bootstrapping/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CUDA object src/CMakeFiles/Phantom.dir/ckks.cu.o"
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/ckks.cu.o -MF CMakeFiles/Phantom.dir/ckks.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe-bootstrapping/src/ckks.cu -o CMakeFiles/Phantom.dir/ckks.cu.o
 
 src/CMakeFiles/Phantom.dir/ckks.cu.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CUDA source to CMakeFiles/Phantom.dir/ckks.cu.i"
@@ -251,10 +251,10 @@ src/CMakeFiles/Phantom.dir/ckks.cu.s: cmake_force
 
 src/CMakeFiles/Phantom.dir/galois.cu.o: src/CMakeFiles/Phantom.dir/flags.make
 src/CMakeFiles/Phantom.dir/galois.cu.o: src/CMakeFiles/Phantom.dir/includes_CUDA.rsp
-src/CMakeFiles/Phantom.dir/galois.cu.o: /home/sandia/codex/phantom-fhe/src/galois.cu
+src/CMakeFiles/Phantom.dir/galois.cu.o: /home/sandia/codex/phantom-fhe-bootstrapping/src/galois.cu
 src/CMakeFiles/Phantom.dir/galois.cu.o: src/CMakeFiles/Phantom.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CUDA object src/CMakeFiles/Phantom.dir/galois.cu.o"
-	cd /home/sandia/codex/phantom-fhe/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/galois.cu.o -MF CMakeFiles/Phantom.dir/galois.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe/src/galois.cu -o CMakeFiles/Phantom.dir/galois.cu.o
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe-bootstrapping/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CUDA object src/CMakeFiles/Phantom.dir/galois.cu.o"
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/galois.cu.o -MF CMakeFiles/Phantom.dir/galois.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe-bootstrapping/src/galois.cu -o CMakeFiles/Phantom.dir/galois.cu.o
 
 src/CMakeFiles/Phantom.dir/galois.cu.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CUDA source to CMakeFiles/Phantom.dir/galois.cu.i"
@@ -266,10 +266,10 @@ src/CMakeFiles/Phantom.dir/galois.cu.s: cmake_force
 
 src/CMakeFiles/Phantom.dir/eval_key_switch.cu.o: src/CMakeFiles/Phantom.dir/flags.make
 src/CMakeFiles/Phantom.dir/eval_key_switch.cu.o: src/CMakeFiles/Phantom.dir/includes_CUDA.rsp
-src/CMakeFiles/Phantom.dir/eval_key_switch.cu.o: /home/sandia/codex/phantom-fhe/src/eval_key_switch.cu
+src/CMakeFiles/Phantom.dir/eval_key_switch.cu.o: /home/sandia/codex/phantom-fhe-bootstrapping/src/eval_key_switch.cu
 src/CMakeFiles/Phantom.dir/eval_key_switch.cu.o: src/CMakeFiles/Phantom.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CUDA object src/CMakeFiles/Phantom.dir/eval_key_switch.cu.o"
-	cd /home/sandia/codex/phantom-fhe/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/eval_key_switch.cu.o -MF CMakeFiles/Phantom.dir/eval_key_switch.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe/src/eval_key_switch.cu -o CMakeFiles/Phantom.dir/eval_key_switch.cu.o
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe-bootstrapping/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CUDA object src/CMakeFiles/Phantom.dir/eval_key_switch.cu.o"
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/eval_key_switch.cu.o -MF CMakeFiles/Phantom.dir/eval_key_switch.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe-bootstrapping/src/eval_key_switch.cu -o CMakeFiles/Phantom.dir/eval_key_switch.cu.o
 
 src/CMakeFiles/Phantom.dir/eval_key_switch.cu.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CUDA source to CMakeFiles/Phantom.dir/eval_key_switch.cu.i"
@@ -279,12 +279,72 @@ src/CMakeFiles/Phantom.dir/eval_key_switch.cu.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CUDA source to assembly CMakeFiles/Phantom.dir/eval_key_switch.cu.s"
 	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CUDA_CREATE_ASSEMBLY_SOURCE
 
+src/CMakeFiles/Phantom.dir/bootstrap.cu.o: src/CMakeFiles/Phantom.dir/flags.make
+src/CMakeFiles/Phantom.dir/bootstrap.cu.o: src/CMakeFiles/Phantom.dir/includes_CUDA.rsp
+src/CMakeFiles/Phantom.dir/bootstrap.cu.o: /home/sandia/codex/phantom-fhe-bootstrapping/src/bootstrap.cu
+src/CMakeFiles/Phantom.dir/bootstrap.cu.o: src/CMakeFiles/Phantom.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe-bootstrapping/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CUDA object src/CMakeFiles/Phantom.dir/bootstrap.cu.o"
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/bootstrap.cu.o -MF CMakeFiles/Phantom.dir/bootstrap.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe-bootstrapping/src/bootstrap.cu -o CMakeFiles/Phantom.dir/bootstrap.cu.o
+
+src/CMakeFiles/Phantom.dir/bootstrap.cu.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CUDA source to CMakeFiles/Phantom.dir/bootstrap.cu.i"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CUDA_CREATE_PREPROCESSED_SOURCE
+
+src/CMakeFiles/Phantom.dir/bootstrap.cu.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CUDA source to assembly CMakeFiles/Phantom.dir/bootstrap.cu.s"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CUDA_CREATE_ASSEMBLY_SOURCE
+
+src/CMakeFiles/Phantom.dir/util.cu.o: src/CMakeFiles/Phantom.dir/flags.make
+src/CMakeFiles/Phantom.dir/util.cu.o: src/CMakeFiles/Phantom.dir/includes_CUDA.rsp
+src/CMakeFiles/Phantom.dir/util.cu.o: /home/sandia/codex/phantom-fhe-bootstrapping/src/util.cu
+src/CMakeFiles/Phantom.dir/util.cu.o: src/CMakeFiles/Phantom.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe-bootstrapping/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CUDA object src/CMakeFiles/Phantom.dir/util.cu.o"
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/util.cu.o -MF CMakeFiles/Phantom.dir/util.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe-bootstrapping/src/util.cu -o CMakeFiles/Phantom.dir/util.cu.o
+
+src/CMakeFiles/Phantom.dir/util.cu.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CUDA source to CMakeFiles/Phantom.dir/util.cu.i"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CUDA_CREATE_PREPROCESSED_SOURCE
+
+src/CMakeFiles/Phantom.dir/util.cu.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CUDA source to assembly CMakeFiles/Phantom.dir/util.cu.s"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CUDA_CREATE_ASSEMBLY_SOURCE
+
+src/CMakeFiles/Phantom.dir/convolution.cu.o: src/CMakeFiles/Phantom.dir/flags.make
+src/CMakeFiles/Phantom.dir/convolution.cu.o: src/CMakeFiles/Phantom.dir/includes_CUDA.rsp
+src/CMakeFiles/Phantom.dir/convolution.cu.o: /home/sandia/codex/phantom-fhe-bootstrapping/src/convolution.cu
+src/CMakeFiles/Phantom.dir/convolution.cu.o: src/CMakeFiles/Phantom.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe-bootstrapping/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CUDA object src/CMakeFiles/Phantom.dir/convolution.cu.o"
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/convolution.cu.o -MF CMakeFiles/Phantom.dir/convolution.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe-bootstrapping/src/convolution.cu -o CMakeFiles/Phantom.dir/convolution.cu.o
+
+src/CMakeFiles/Phantom.dir/convolution.cu.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CUDA source to CMakeFiles/Phantom.dir/convolution.cu.i"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CUDA_CREATE_PREPROCESSED_SOURCE
+
+src/CMakeFiles/Phantom.dir/convolution.cu.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CUDA source to assembly CMakeFiles/Phantom.dir/convolution.cu.s"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CUDA_CREATE_ASSEMBLY_SOURCE
+
+src/CMakeFiles/Phantom.dir/dnn.cu.o: src/CMakeFiles/Phantom.dir/flags.make
+src/CMakeFiles/Phantom.dir/dnn.cu.o: src/CMakeFiles/Phantom.dir/includes_CUDA.rsp
+src/CMakeFiles/Phantom.dir/dnn.cu.o: /home/sandia/codex/phantom-fhe-bootstrapping/src/dnn.cu
+src/CMakeFiles/Phantom.dir/dnn.cu.o: src/CMakeFiles/Phantom.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe-bootstrapping/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CUDA object src/CMakeFiles/Phantom.dir/dnn.cu.o"
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/dnn.cu.o -MF CMakeFiles/Phantom.dir/dnn.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe-bootstrapping/src/dnn.cu -o CMakeFiles/Phantom.dir/dnn.cu.o
+
+src/CMakeFiles/Phantom.dir/dnn.cu.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CUDA source to CMakeFiles/Phantom.dir/dnn.cu.i"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CUDA_CREATE_PREPROCESSED_SOURCE
+
+src/CMakeFiles/Phantom.dir/dnn.cu.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CUDA source to assembly CMakeFiles/Phantom.dir/dnn.cu.s"
+	$(CMAKE_COMMAND) -E cmake_unimplemented_variable CMAKE_CUDA_CREATE_ASSEMBLY_SOURCE
+
 src/CMakeFiles/Phantom.dir/ntt/fntt_2d.cu.o: src/CMakeFiles/Phantom.dir/flags.make
 src/CMakeFiles/Phantom.dir/ntt/fntt_2d.cu.o: src/CMakeFiles/Phantom.dir/includes_CUDA.rsp
-src/CMakeFiles/Phantom.dir/ntt/fntt_2d.cu.o: /home/sandia/codex/phantom-fhe/src/ntt/fntt_2d.cu
+src/CMakeFiles/Phantom.dir/ntt/fntt_2d.cu.o: /home/sandia/codex/phantom-fhe-bootstrapping/src/ntt/fntt_2d.cu
 src/CMakeFiles/Phantom.dir/ntt/fntt_2d.cu.o: src/CMakeFiles/Phantom.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CUDA object src/CMakeFiles/Phantom.dir/ntt/fntt_2d.cu.o"
-	cd /home/sandia/codex/phantom-fhe/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/ntt/fntt_2d.cu.o -MF CMakeFiles/Phantom.dir/ntt/fntt_2d.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe/src/ntt/fntt_2d.cu -o CMakeFiles/Phantom.dir/ntt/fntt_2d.cu.o
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe-bootstrapping/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CUDA object src/CMakeFiles/Phantom.dir/ntt/fntt_2d.cu.o"
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/ntt/fntt_2d.cu.o -MF CMakeFiles/Phantom.dir/ntt/fntt_2d.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe-bootstrapping/src/ntt/fntt_2d.cu -o CMakeFiles/Phantom.dir/ntt/fntt_2d.cu.o
 
 src/CMakeFiles/Phantom.dir/ntt/fntt_2d.cu.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CUDA source to CMakeFiles/Phantom.dir/ntt/fntt_2d.cu.i"
@@ -296,10 +356,10 @@ src/CMakeFiles/Phantom.dir/ntt/fntt_2d.cu.s: cmake_force
 
 src/CMakeFiles/Phantom.dir/ntt/ntt_1d.cu.o: src/CMakeFiles/Phantom.dir/flags.make
 src/CMakeFiles/Phantom.dir/ntt/ntt_1d.cu.o: src/CMakeFiles/Phantom.dir/includes_CUDA.rsp
-src/CMakeFiles/Phantom.dir/ntt/ntt_1d.cu.o: /home/sandia/codex/phantom-fhe/src/ntt/ntt_1d.cu
+src/CMakeFiles/Phantom.dir/ntt/ntt_1d.cu.o: /home/sandia/codex/phantom-fhe-bootstrapping/src/ntt/ntt_1d.cu
 src/CMakeFiles/Phantom.dir/ntt/ntt_1d.cu.o: src/CMakeFiles/Phantom.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CUDA object src/CMakeFiles/Phantom.dir/ntt/ntt_1d.cu.o"
-	cd /home/sandia/codex/phantom-fhe/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/ntt/ntt_1d.cu.o -MF CMakeFiles/Phantom.dir/ntt/ntt_1d.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe/src/ntt/ntt_1d.cu -o CMakeFiles/Phantom.dir/ntt/ntt_1d.cu.o
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe-bootstrapping/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CUDA object src/CMakeFiles/Phantom.dir/ntt/ntt_1d.cu.o"
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/ntt/ntt_1d.cu.o -MF CMakeFiles/Phantom.dir/ntt/ntt_1d.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe-bootstrapping/src/ntt/ntt_1d.cu -o CMakeFiles/Phantom.dir/ntt/ntt_1d.cu.o
 
 src/CMakeFiles/Phantom.dir/ntt/ntt_1d.cu.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CUDA source to CMakeFiles/Phantom.dir/ntt/ntt_1d.cu.i"
@@ -311,10 +371,10 @@ src/CMakeFiles/Phantom.dir/ntt/ntt_1d.cu.s: cmake_force
 
 src/CMakeFiles/Phantom.dir/ntt/ntt_keyswitch_old.cu.o: src/CMakeFiles/Phantom.dir/flags.make
 src/CMakeFiles/Phantom.dir/ntt/ntt_keyswitch_old.cu.o: src/CMakeFiles/Phantom.dir/includes_CUDA.rsp
-src/CMakeFiles/Phantom.dir/ntt/ntt_keyswitch_old.cu.o: /home/sandia/codex/phantom-fhe/src/ntt/ntt_keyswitch_old.cu
+src/CMakeFiles/Phantom.dir/ntt/ntt_keyswitch_old.cu.o: /home/sandia/codex/phantom-fhe-bootstrapping/src/ntt/ntt_keyswitch_old.cu
 src/CMakeFiles/Phantom.dir/ntt/ntt_keyswitch_old.cu.o: src/CMakeFiles/Phantom.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CUDA object src/CMakeFiles/Phantom.dir/ntt/ntt_keyswitch_old.cu.o"
-	cd /home/sandia/codex/phantom-fhe/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/ntt/ntt_keyswitch_old.cu.o -MF CMakeFiles/Phantom.dir/ntt/ntt_keyswitch_old.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe/src/ntt/ntt_keyswitch_old.cu -o CMakeFiles/Phantom.dir/ntt/ntt_keyswitch_old.cu.o
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe-bootstrapping/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CUDA object src/CMakeFiles/Phantom.dir/ntt/ntt_keyswitch_old.cu.o"
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/ntt/ntt_keyswitch_old.cu.o -MF CMakeFiles/Phantom.dir/ntt/ntt_keyswitch_old.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe-bootstrapping/src/ntt/ntt_keyswitch_old.cu -o CMakeFiles/Phantom.dir/ntt/ntt_keyswitch_old.cu.o
 
 src/CMakeFiles/Phantom.dir/ntt/ntt_keyswitch_old.cu.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CUDA source to CMakeFiles/Phantom.dir/ntt/ntt_keyswitch_old.cu.i"
@@ -326,10 +386,10 @@ src/CMakeFiles/Phantom.dir/ntt/ntt_keyswitch_old.cu.s: cmake_force
 
 src/CMakeFiles/Phantom.dir/ntt/intt_2d.cu.o: src/CMakeFiles/Phantom.dir/flags.make
 src/CMakeFiles/Phantom.dir/ntt/intt_2d.cu.o: src/CMakeFiles/Phantom.dir/includes_CUDA.rsp
-src/CMakeFiles/Phantom.dir/ntt/intt_2d.cu.o: /home/sandia/codex/phantom-fhe/src/ntt/intt_2d.cu
+src/CMakeFiles/Phantom.dir/ntt/intt_2d.cu.o: /home/sandia/codex/phantom-fhe-bootstrapping/src/ntt/intt_2d.cu
 src/CMakeFiles/Phantom.dir/ntt/intt_2d.cu.o: src/CMakeFiles/Phantom.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CUDA object src/CMakeFiles/Phantom.dir/ntt/intt_2d.cu.o"
-	cd /home/sandia/codex/phantom-fhe/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/ntt/intt_2d.cu.o -MF CMakeFiles/Phantom.dir/ntt/intt_2d.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe/src/ntt/intt_2d.cu -o CMakeFiles/Phantom.dir/ntt/intt_2d.cu.o
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe-bootstrapping/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CUDA object src/CMakeFiles/Phantom.dir/ntt/intt_2d.cu.o"
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/ntt/intt_2d.cu.o -MF CMakeFiles/Phantom.dir/ntt/intt_2d.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe-bootstrapping/src/ntt/intt_2d.cu -o CMakeFiles/Phantom.dir/ntt/intt_2d.cu.o
 
 src/CMakeFiles/Phantom.dir/ntt/intt_2d.cu.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CUDA source to CMakeFiles/Phantom.dir/ntt/intt_2d.cu.i"
@@ -341,10 +401,10 @@ src/CMakeFiles/Phantom.dir/ntt/intt_2d.cu.s: cmake_force
 
 src/CMakeFiles/Phantom.dir/ntt/ntt_modup.cu.o: src/CMakeFiles/Phantom.dir/flags.make
 src/CMakeFiles/Phantom.dir/ntt/ntt_modup.cu.o: src/CMakeFiles/Phantom.dir/includes_CUDA.rsp
-src/CMakeFiles/Phantom.dir/ntt/ntt_modup.cu.o: /home/sandia/codex/phantom-fhe/src/ntt/ntt_modup.cu
+src/CMakeFiles/Phantom.dir/ntt/ntt_modup.cu.o: /home/sandia/codex/phantom-fhe-bootstrapping/src/ntt/ntt_modup.cu
 src/CMakeFiles/Phantom.dir/ntt/ntt_modup.cu.o: src/CMakeFiles/Phantom.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CUDA object src/CMakeFiles/Phantom.dir/ntt/ntt_modup.cu.o"
-	cd /home/sandia/codex/phantom-fhe/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/ntt/ntt_modup.cu.o -MF CMakeFiles/Phantom.dir/ntt/ntt_modup.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe/src/ntt/ntt_modup.cu -o CMakeFiles/Phantom.dir/ntt/ntt_modup.cu.o
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe-bootstrapping/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CUDA object src/CMakeFiles/Phantom.dir/ntt/ntt_modup.cu.o"
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/ntt/ntt_modup.cu.o -MF CMakeFiles/Phantom.dir/ntt/ntt_modup.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe-bootstrapping/src/ntt/ntt_modup.cu -o CMakeFiles/Phantom.dir/ntt/ntt_modup.cu.o
 
 src/CMakeFiles/Phantom.dir/ntt/ntt_modup.cu.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CUDA source to CMakeFiles/Phantom.dir/ntt/ntt_modup.cu.i"
@@ -356,10 +416,10 @@ src/CMakeFiles/Phantom.dir/ntt/ntt_modup.cu.s: cmake_force
 
 src/CMakeFiles/Phantom.dir/ntt/ntt_moddown.cu.o: src/CMakeFiles/Phantom.dir/flags.make
 src/CMakeFiles/Phantom.dir/ntt/ntt_moddown.cu.o: src/CMakeFiles/Phantom.dir/includes_CUDA.rsp
-src/CMakeFiles/Phantom.dir/ntt/ntt_moddown.cu.o: /home/sandia/codex/phantom-fhe/src/ntt/ntt_moddown.cu
+src/CMakeFiles/Phantom.dir/ntt/ntt_moddown.cu.o: /home/sandia/codex/phantom-fhe-bootstrapping/src/ntt/ntt_moddown.cu
 src/CMakeFiles/Phantom.dir/ntt/ntt_moddown.cu.o: src/CMakeFiles/Phantom.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CUDA object src/CMakeFiles/Phantom.dir/ntt/ntt_moddown.cu.o"
-	cd /home/sandia/codex/phantom-fhe/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/ntt/ntt_moddown.cu.o -MF CMakeFiles/Phantom.dir/ntt/ntt_moddown.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe/src/ntt/ntt_moddown.cu -o CMakeFiles/Phantom.dir/ntt/ntt_moddown.cu.o
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe-bootstrapping/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CUDA object src/CMakeFiles/Phantom.dir/ntt/ntt_moddown.cu.o"
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/ntt/ntt_moddown.cu.o -MF CMakeFiles/Phantom.dir/ntt/ntt_moddown.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe-bootstrapping/src/ntt/ntt_moddown.cu -o CMakeFiles/Phantom.dir/ntt/ntt_moddown.cu.o
 
 src/CMakeFiles/Phantom.dir/ntt/ntt_moddown.cu.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CUDA source to CMakeFiles/Phantom.dir/ntt/ntt_moddown.cu.i"
@@ -371,10 +431,10 @@ src/CMakeFiles/Phantom.dir/ntt/ntt_moddown.cu.s: cmake_force
 
 src/CMakeFiles/Phantom.dir/host/blake2b.cu.o: src/CMakeFiles/Phantom.dir/flags.make
 src/CMakeFiles/Phantom.dir/host/blake2b.cu.o: src/CMakeFiles/Phantom.dir/includes_CUDA.rsp
-src/CMakeFiles/Phantom.dir/host/blake2b.cu.o: /home/sandia/codex/phantom-fhe/src/host/blake2b.cu
+src/CMakeFiles/Phantom.dir/host/blake2b.cu.o: /home/sandia/codex/phantom-fhe-bootstrapping/src/host/blake2b.cu
 src/CMakeFiles/Phantom.dir/host/blake2b.cu.o: src/CMakeFiles/Phantom.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CUDA object src/CMakeFiles/Phantom.dir/host/blake2b.cu.o"
-	cd /home/sandia/codex/phantom-fhe/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/host/blake2b.cu.o -MF CMakeFiles/Phantom.dir/host/blake2b.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe/src/host/blake2b.cu -o CMakeFiles/Phantom.dir/host/blake2b.cu.o
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe-bootstrapping/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CUDA object src/CMakeFiles/Phantom.dir/host/blake2b.cu.o"
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/host/blake2b.cu.o -MF CMakeFiles/Phantom.dir/host/blake2b.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe-bootstrapping/src/host/blake2b.cu -o CMakeFiles/Phantom.dir/host/blake2b.cu.o
 
 src/CMakeFiles/Phantom.dir/host/blake2b.cu.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CUDA source to CMakeFiles/Phantom.dir/host/blake2b.cu.i"
@@ -386,10 +446,10 @@ src/CMakeFiles/Phantom.dir/host/blake2b.cu.s: cmake_force
 
 src/CMakeFiles/Phantom.dir/host/blake2xb.cu.o: src/CMakeFiles/Phantom.dir/flags.make
 src/CMakeFiles/Phantom.dir/host/blake2xb.cu.o: src/CMakeFiles/Phantom.dir/includes_CUDA.rsp
-src/CMakeFiles/Phantom.dir/host/blake2xb.cu.o: /home/sandia/codex/phantom-fhe/src/host/blake2xb.cu
+src/CMakeFiles/Phantom.dir/host/blake2xb.cu.o: /home/sandia/codex/phantom-fhe-bootstrapping/src/host/blake2xb.cu
 src/CMakeFiles/Phantom.dir/host/blake2xb.cu.o: src/CMakeFiles/Phantom.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CUDA object src/CMakeFiles/Phantom.dir/host/blake2xb.cu.o"
-	cd /home/sandia/codex/phantom-fhe/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/host/blake2xb.cu.o -MF CMakeFiles/Phantom.dir/host/blake2xb.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe/src/host/blake2xb.cu -o CMakeFiles/Phantom.dir/host/blake2xb.cu.o
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe-bootstrapping/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CUDA object src/CMakeFiles/Phantom.dir/host/blake2xb.cu.o"
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/host/blake2xb.cu.o -MF CMakeFiles/Phantom.dir/host/blake2xb.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe-bootstrapping/src/host/blake2xb.cu -o CMakeFiles/Phantom.dir/host/blake2xb.cu.o
 
 src/CMakeFiles/Phantom.dir/host/blake2xb.cu.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CUDA source to CMakeFiles/Phantom.dir/host/blake2xb.cu.i"
@@ -401,10 +461,10 @@ src/CMakeFiles/Phantom.dir/host/blake2xb.cu.s: cmake_force
 
 src/CMakeFiles/Phantom.dir/host/globals.cu.o: src/CMakeFiles/Phantom.dir/flags.make
 src/CMakeFiles/Phantom.dir/host/globals.cu.o: src/CMakeFiles/Phantom.dir/includes_CUDA.rsp
-src/CMakeFiles/Phantom.dir/host/globals.cu.o: /home/sandia/codex/phantom-fhe/src/host/globals.cu
+src/CMakeFiles/Phantom.dir/host/globals.cu.o: /home/sandia/codex/phantom-fhe-bootstrapping/src/host/globals.cu
 src/CMakeFiles/Phantom.dir/host/globals.cu.o: src/CMakeFiles/Phantom.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CUDA object src/CMakeFiles/Phantom.dir/host/globals.cu.o"
-	cd /home/sandia/codex/phantom-fhe/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/host/globals.cu.o -MF CMakeFiles/Phantom.dir/host/globals.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe/src/host/globals.cu -o CMakeFiles/Phantom.dir/host/globals.cu.o
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe-bootstrapping/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CUDA object src/CMakeFiles/Phantom.dir/host/globals.cu.o"
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/host/globals.cu.o -MF CMakeFiles/Phantom.dir/host/globals.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe-bootstrapping/src/host/globals.cu -o CMakeFiles/Phantom.dir/host/globals.cu.o
 
 src/CMakeFiles/Phantom.dir/host/globals.cu.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CUDA source to CMakeFiles/Phantom.dir/host/globals.cu.i"
@@ -416,10 +476,10 @@ src/CMakeFiles/Phantom.dir/host/globals.cu.s: cmake_force
 
 src/CMakeFiles/Phantom.dir/host/hash.cu.o: src/CMakeFiles/Phantom.dir/flags.make
 src/CMakeFiles/Phantom.dir/host/hash.cu.o: src/CMakeFiles/Phantom.dir/includes_CUDA.rsp
-src/CMakeFiles/Phantom.dir/host/hash.cu.o: /home/sandia/codex/phantom-fhe/src/host/hash.cu
+src/CMakeFiles/Phantom.dir/host/hash.cu.o: /home/sandia/codex/phantom-fhe-bootstrapping/src/host/hash.cu
 src/CMakeFiles/Phantom.dir/host/hash.cu.o: src/CMakeFiles/Phantom.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building CUDA object src/CMakeFiles/Phantom.dir/host/hash.cu.o"
-	cd /home/sandia/codex/phantom-fhe/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/host/hash.cu.o -MF CMakeFiles/Phantom.dir/host/hash.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe/src/host/hash.cu -o CMakeFiles/Phantom.dir/host/hash.cu.o
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe-bootstrapping/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CUDA object src/CMakeFiles/Phantom.dir/host/hash.cu.o"
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/host/hash.cu.o -MF CMakeFiles/Phantom.dir/host/hash.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe-bootstrapping/src/host/hash.cu -o CMakeFiles/Phantom.dir/host/hash.cu.o
 
 src/CMakeFiles/Phantom.dir/host/hash.cu.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CUDA source to CMakeFiles/Phantom.dir/host/hash.cu.i"
@@ -431,10 +491,10 @@ src/CMakeFiles/Phantom.dir/host/hash.cu.s: cmake_force
 
 src/CMakeFiles/Phantom.dir/host/modulus.cu.o: src/CMakeFiles/Phantom.dir/flags.make
 src/CMakeFiles/Phantom.dir/host/modulus.cu.o: src/CMakeFiles/Phantom.dir/includes_CUDA.rsp
-src/CMakeFiles/Phantom.dir/host/modulus.cu.o: /home/sandia/codex/phantom-fhe/src/host/modulus.cu
+src/CMakeFiles/Phantom.dir/host/modulus.cu.o: /home/sandia/codex/phantom-fhe-bootstrapping/src/host/modulus.cu
 src/CMakeFiles/Phantom.dir/host/modulus.cu.o: src/CMakeFiles/Phantom.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CUDA object src/CMakeFiles/Phantom.dir/host/modulus.cu.o"
-	cd /home/sandia/codex/phantom-fhe/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/host/modulus.cu.o -MF CMakeFiles/Phantom.dir/host/modulus.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe/src/host/modulus.cu -o CMakeFiles/Phantom.dir/host/modulus.cu.o
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe-bootstrapping/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CUDA object src/CMakeFiles/Phantom.dir/host/modulus.cu.o"
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/host/modulus.cu.o -MF CMakeFiles/Phantom.dir/host/modulus.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe-bootstrapping/src/host/modulus.cu -o CMakeFiles/Phantom.dir/host/modulus.cu.o
 
 src/CMakeFiles/Phantom.dir/host/modulus.cu.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CUDA source to CMakeFiles/Phantom.dir/host/modulus.cu.i"
@@ -446,10 +506,10 @@ src/CMakeFiles/Phantom.dir/host/modulus.cu.s: cmake_force
 
 src/CMakeFiles/Phantom.dir/host/ntt.cu.o: src/CMakeFiles/Phantom.dir/flags.make
 src/CMakeFiles/Phantom.dir/host/ntt.cu.o: src/CMakeFiles/Phantom.dir/includes_CUDA.rsp
-src/CMakeFiles/Phantom.dir/host/ntt.cu.o: /home/sandia/codex/phantom-fhe/src/host/ntt.cu
+src/CMakeFiles/Phantom.dir/host/ntt.cu.o: /home/sandia/codex/phantom-fhe-bootstrapping/src/host/ntt.cu
 src/CMakeFiles/Phantom.dir/host/ntt.cu.o: src/CMakeFiles/Phantom.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CUDA object src/CMakeFiles/Phantom.dir/host/ntt.cu.o"
-	cd /home/sandia/codex/phantom-fhe/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/host/ntt.cu.o -MF CMakeFiles/Phantom.dir/host/ntt.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe/src/host/ntt.cu -o CMakeFiles/Phantom.dir/host/ntt.cu.o
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe-bootstrapping/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CUDA object src/CMakeFiles/Phantom.dir/host/ntt.cu.o"
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/host/ntt.cu.o -MF CMakeFiles/Phantom.dir/host/ntt.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe-bootstrapping/src/host/ntt.cu -o CMakeFiles/Phantom.dir/host/ntt.cu.o
 
 src/CMakeFiles/Phantom.dir/host/ntt.cu.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CUDA source to CMakeFiles/Phantom.dir/host/ntt.cu.i"
@@ -461,10 +521,10 @@ src/CMakeFiles/Phantom.dir/host/ntt.cu.s: cmake_force
 
 src/CMakeFiles/Phantom.dir/host/numth.cu.o: src/CMakeFiles/Phantom.dir/flags.make
 src/CMakeFiles/Phantom.dir/host/numth.cu.o: src/CMakeFiles/Phantom.dir/includes_CUDA.rsp
-src/CMakeFiles/Phantom.dir/host/numth.cu.o: /home/sandia/codex/phantom-fhe/src/host/numth.cu
+src/CMakeFiles/Phantom.dir/host/numth.cu.o: /home/sandia/codex/phantom-fhe-bootstrapping/src/host/numth.cu
 src/CMakeFiles/Phantom.dir/host/numth.cu.o: src/CMakeFiles/Phantom.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CUDA object src/CMakeFiles/Phantom.dir/host/numth.cu.o"
-	cd /home/sandia/codex/phantom-fhe/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/host/numth.cu.o -MF CMakeFiles/Phantom.dir/host/numth.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe/src/host/numth.cu -o CMakeFiles/Phantom.dir/host/numth.cu.o
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe-bootstrapping/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CUDA object src/CMakeFiles/Phantom.dir/host/numth.cu.o"
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/host/numth.cu.o -MF CMakeFiles/Phantom.dir/host/numth.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe-bootstrapping/src/host/numth.cu -o CMakeFiles/Phantom.dir/host/numth.cu.o
 
 src/CMakeFiles/Phantom.dir/host/numth.cu.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CUDA source to CMakeFiles/Phantom.dir/host/numth.cu.i"
@@ -476,10 +536,10 @@ src/CMakeFiles/Phantom.dir/host/numth.cu.s: cmake_force
 
 src/CMakeFiles/Phantom.dir/host/rns.cu.o: src/CMakeFiles/Phantom.dir/flags.make
 src/CMakeFiles/Phantom.dir/host/rns.cu.o: src/CMakeFiles/Phantom.dir/includes_CUDA.rsp
-src/CMakeFiles/Phantom.dir/host/rns.cu.o: /home/sandia/codex/phantom-fhe/src/host/rns.cu
+src/CMakeFiles/Phantom.dir/host/rns.cu.o: /home/sandia/codex/phantom-fhe-bootstrapping/src/host/rns.cu
 src/CMakeFiles/Phantom.dir/host/rns.cu.o: src/CMakeFiles/Phantom.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CUDA object src/CMakeFiles/Phantom.dir/host/rns.cu.o"
-	cd /home/sandia/codex/phantom-fhe/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/host/rns.cu.o -MF CMakeFiles/Phantom.dir/host/rns.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe/src/host/rns.cu -o CMakeFiles/Phantom.dir/host/rns.cu.o
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe-bootstrapping/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CUDA object src/CMakeFiles/Phantom.dir/host/rns.cu.o"
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/host/rns.cu.o -MF CMakeFiles/Phantom.dir/host/rns.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe-bootstrapping/src/host/rns.cu -o CMakeFiles/Phantom.dir/host/rns.cu.o
 
 src/CMakeFiles/Phantom.dir/host/rns.cu.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CUDA source to CMakeFiles/Phantom.dir/host/rns.cu.i"
@@ -491,10 +551,10 @@ src/CMakeFiles/Phantom.dir/host/rns.cu.s: cmake_force
 
 src/CMakeFiles/Phantom.dir/host/uintarith.cu.o: src/CMakeFiles/Phantom.dir/flags.make
 src/CMakeFiles/Phantom.dir/host/uintarith.cu.o: src/CMakeFiles/Phantom.dir/includes_CUDA.rsp
-src/CMakeFiles/Phantom.dir/host/uintarith.cu.o: /home/sandia/codex/phantom-fhe/src/host/uintarith.cu
+src/CMakeFiles/Phantom.dir/host/uintarith.cu.o: /home/sandia/codex/phantom-fhe-bootstrapping/src/host/uintarith.cu
 src/CMakeFiles/Phantom.dir/host/uintarith.cu.o: src/CMakeFiles/Phantom.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CUDA object src/CMakeFiles/Phantom.dir/host/uintarith.cu.o"
-	cd /home/sandia/codex/phantom-fhe/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/host/uintarith.cu.o -MF CMakeFiles/Phantom.dir/host/uintarith.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe/src/host/uintarith.cu -o CMakeFiles/Phantom.dir/host/uintarith.cu.o
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe-bootstrapping/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CUDA object src/CMakeFiles/Phantom.dir/host/uintarith.cu.o"
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/host/uintarith.cu.o -MF CMakeFiles/Phantom.dir/host/uintarith.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe-bootstrapping/src/host/uintarith.cu -o CMakeFiles/Phantom.dir/host/uintarith.cu.o
 
 src/CMakeFiles/Phantom.dir/host/uintarith.cu.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CUDA source to CMakeFiles/Phantom.dir/host/uintarith.cu.i"
@@ -506,10 +566,10 @@ src/CMakeFiles/Phantom.dir/host/uintarith.cu.s: cmake_force
 
 src/CMakeFiles/Phantom.dir/host/uintarithmod.cu.o: src/CMakeFiles/Phantom.dir/flags.make
 src/CMakeFiles/Phantom.dir/host/uintarithmod.cu.o: src/CMakeFiles/Phantom.dir/includes_CUDA.rsp
-src/CMakeFiles/Phantom.dir/host/uintarithmod.cu.o: /home/sandia/codex/phantom-fhe/src/host/uintarithmod.cu
+src/CMakeFiles/Phantom.dir/host/uintarithmod.cu.o: /home/sandia/codex/phantom-fhe-bootstrapping/src/host/uintarithmod.cu
 src/CMakeFiles/Phantom.dir/host/uintarithmod.cu.o: src/CMakeFiles/Phantom.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CUDA object src/CMakeFiles/Phantom.dir/host/uintarithmod.cu.o"
-	cd /home/sandia/codex/phantom-fhe/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/host/uintarithmod.cu.o -MF CMakeFiles/Phantom.dir/host/uintarithmod.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe/src/host/uintarithmod.cu -o CMakeFiles/Phantom.dir/host/uintarithmod.cu.o
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe-bootstrapping/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CUDA object src/CMakeFiles/Phantom.dir/host/uintarithmod.cu.o"
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/host/uintarithmod.cu.o -MF CMakeFiles/Phantom.dir/host/uintarithmod.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe-bootstrapping/src/host/uintarithmod.cu -o CMakeFiles/Phantom.dir/host/uintarithmod.cu.o
 
 src/CMakeFiles/Phantom.dir/host/uintarithmod.cu.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CUDA source to CMakeFiles/Phantom.dir/host/uintarithmod.cu.i"
@@ -521,10 +581,10 @@ src/CMakeFiles/Phantom.dir/host/uintarithmod.cu.s: cmake_force
 
 src/CMakeFiles/Phantom.dir/host/uintarithsmallmod.cu.o: src/CMakeFiles/Phantom.dir/flags.make
 src/CMakeFiles/Phantom.dir/host/uintarithsmallmod.cu.o: src/CMakeFiles/Phantom.dir/includes_CUDA.rsp
-src/CMakeFiles/Phantom.dir/host/uintarithsmallmod.cu.o: /home/sandia/codex/phantom-fhe/src/host/uintarithsmallmod.cu
+src/CMakeFiles/Phantom.dir/host/uintarithsmallmod.cu.o: /home/sandia/codex/phantom-fhe-bootstrapping/src/host/uintarithsmallmod.cu
 src/CMakeFiles/Phantom.dir/host/uintarithsmallmod.cu.o: src/CMakeFiles/Phantom.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CUDA object src/CMakeFiles/Phantom.dir/host/uintarithsmallmod.cu.o"
-	cd /home/sandia/codex/phantom-fhe/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/host/uintarithsmallmod.cu.o -MF CMakeFiles/Phantom.dir/host/uintarithsmallmod.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe/src/host/uintarithsmallmod.cu -o CMakeFiles/Phantom.dir/host/uintarithsmallmod.cu.o
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/sandia/codex/phantom-fhe-bootstrapping/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CUDA object src/CMakeFiles/Phantom.dir/host/uintarithsmallmod.cu.o"
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build/src && /usr/bin/nvcc -forward-unknown-to-host-compiler $(CUDA_DEFINES) $(CUDA_INCLUDES) $(CUDA_FLAGS) -MD -MT src/CMakeFiles/Phantom.dir/host/uintarithsmallmod.cu.o -MF CMakeFiles/Phantom.dir/host/uintarithsmallmod.cu.o.d -x cu -rdc=true -c /home/sandia/codex/phantom-fhe-bootstrapping/src/host/uintarithsmallmod.cu -o CMakeFiles/Phantom.dir/host/uintarithsmallmod.cu.o
 
 src/CMakeFiles/Phantom.dir/host/uintarithsmallmod.cu.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CUDA source to CMakeFiles/Phantom.dir/host/uintarithsmallmod.cu.i"
@@ -550,6 +610,10 @@ Phantom_OBJECTS = \
 "CMakeFiles/Phantom.dir/ckks.cu.o" \
 "CMakeFiles/Phantom.dir/galois.cu.o" \
 "CMakeFiles/Phantom.dir/eval_key_switch.cu.o" \
+"CMakeFiles/Phantom.dir/bootstrap.cu.o" \
+"CMakeFiles/Phantom.dir/util.cu.o" \
+"CMakeFiles/Phantom.dir/convolution.cu.o" \
+"CMakeFiles/Phantom.dir/dnn.cu.o" \
 "CMakeFiles/Phantom.dir/ntt/fntt_2d.cu.o" \
 "CMakeFiles/Phantom.dir/ntt/ntt_1d.cu.o" \
 "CMakeFiles/Phantom.dir/ntt/ntt_keyswitch_old.cu.o" \
@@ -585,6 +649,10 @@ src/CMakeFiles/Phantom.dir/cmake_device_link.o: src/CMakeFiles/Phantom.dir/fft.c
 src/CMakeFiles/Phantom.dir/cmake_device_link.o: src/CMakeFiles/Phantom.dir/ckks.cu.o
 src/CMakeFiles/Phantom.dir/cmake_device_link.o: src/CMakeFiles/Phantom.dir/galois.cu.o
 src/CMakeFiles/Phantom.dir/cmake_device_link.o: src/CMakeFiles/Phantom.dir/eval_key_switch.cu.o
+src/CMakeFiles/Phantom.dir/cmake_device_link.o: src/CMakeFiles/Phantom.dir/bootstrap.cu.o
+src/CMakeFiles/Phantom.dir/cmake_device_link.o: src/CMakeFiles/Phantom.dir/util.cu.o
+src/CMakeFiles/Phantom.dir/cmake_device_link.o: src/CMakeFiles/Phantom.dir/convolution.cu.o
+src/CMakeFiles/Phantom.dir/cmake_device_link.o: src/CMakeFiles/Phantom.dir/dnn.cu.o
 src/CMakeFiles/Phantom.dir/cmake_device_link.o: src/CMakeFiles/Phantom.dir/ntt/fntt_2d.cu.o
 src/CMakeFiles/Phantom.dir/cmake_device_link.o: src/CMakeFiles/Phantom.dir/ntt/ntt_1d.cu.o
 src/CMakeFiles/Phantom.dir/cmake_device_link.o: src/CMakeFiles/Phantom.dir/ntt/ntt_keyswitch_old.cu.o
@@ -603,12 +671,13 @@ src/CMakeFiles/Phantom.dir/cmake_device_link.o: src/CMakeFiles/Phantom.dir/host/
 src/CMakeFiles/Phantom.dir/cmake_device_link.o: src/CMakeFiles/Phantom.dir/host/uintarithmod.cu.o
 src/CMakeFiles/Phantom.dir/cmake_device_link.o: src/CMakeFiles/Phantom.dir/host/uintarithsmallmod.cu.o
 src/CMakeFiles/Phantom.dir/cmake_device_link.o: src/CMakeFiles/Phantom.dir/build.make
-src/CMakeFiles/Phantom.dir/cmake_device_link.o: /home/sandia/.conda/envs/phantom/lib/libpython3.12.so
+src/CMakeFiles/Phantom.dir/cmake_device_link.o: /usr/lib/gcc/x86_64-linux-gnu/11/libgomp.so
+src/CMakeFiles/Phantom.dir/cmake_device_link.o: /usr/lib/x86_64-linux-gnu/libpthread.a
 src/CMakeFiles/Phantom.dir/cmake_device_link.o: src/CMakeFiles/Phantom.dir/deviceLinkLibs.rsp
 src/CMakeFiles/Phantom.dir/cmake_device_link.o: src/CMakeFiles/Phantom.dir/deviceObjects1.rsp
 src/CMakeFiles/Phantom.dir/cmake_device_link.o: src/CMakeFiles/Phantom.dir/dlink.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/sandia/codex/phantom-fhe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Linking CUDA device code CMakeFiles/Phantom.dir/cmake_device_link.o"
-	cd /home/sandia/codex/phantom-fhe/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Phantom.dir/dlink.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/sandia/codex/phantom-fhe-bootstrapping/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Linking CUDA device code CMakeFiles/Phantom.dir/cmake_device_link.o"
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Phantom.dir/dlink.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/CMakeFiles/Phantom.dir/build: src/CMakeFiles/Phantom.dir/cmake_device_link.o
@@ -630,6 +699,10 @@ Phantom_OBJECTS = \
 "CMakeFiles/Phantom.dir/ckks.cu.o" \
 "CMakeFiles/Phantom.dir/galois.cu.o" \
 "CMakeFiles/Phantom.dir/eval_key_switch.cu.o" \
+"CMakeFiles/Phantom.dir/bootstrap.cu.o" \
+"CMakeFiles/Phantom.dir/util.cu.o" \
+"CMakeFiles/Phantom.dir/convolution.cu.o" \
+"CMakeFiles/Phantom.dir/dnn.cu.o" \
 "CMakeFiles/Phantom.dir/ntt/fntt_2d.cu.o" \
 "CMakeFiles/Phantom.dir/ntt/ntt_1d.cu.o" \
 "CMakeFiles/Phantom.dir/ntt/ntt_keyswitch_old.cu.o" \
@@ -665,6 +738,10 @@ lib/libPhantom.so: src/CMakeFiles/Phantom.dir/fft.cu.o
 lib/libPhantom.so: src/CMakeFiles/Phantom.dir/ckks.cu.o
 lib/libPhantom.so: src/CMakeFiles/Phantom.dir/galois.cu.o
 lib/libPhantom.so: src/CMakeFiles/Phantom.dir/eval_key_switch.cu.o
+lib/libPhantom.so: src/CMakeFiles/Phantom.dir/bootstrap.cu.o
+lib/libPhantom.so: src/CMakeFiles/Phantom.dir/util.cu.o
+lib/libPhantom.so: src/CMakeFiles/Phantom.dir/convolution.cu.o
+lib/libPhantom.so: src/CMakeFiles/Phantom.dir/dnn.cu.o
 lib/libPhantom.so: src/CMakeFiles/Phantom.dir/ntt/fntt_2d.cu.o
 lib/libPhantom.so: src/CMakeFiles/Phantom.dir/ntt/ntt_1d.cu.o
 lib/libPhantom.so: src/CMakeFiles/Phantom.dir/ntt/ntt_keyswitch_old.cu.o
@@ -683,23 +760,24 @@ lib/libPhantom.so: src/CMakeFiles/Phantom.dir/host/uintarith.cu.o
 lib/libPhantom.so: src/CMakeFiles/Phantom.dir/host/uintarithmod.cu.o
 lib/libPhantom.so: src/CMakeFiles/Phantom.dir/host/uintarithsmallmod.cu.o
 lib/libPhantom.so: src/CMakeFiles/Phantom.dir/build.make
-lib/libPhantom.so: /home/sandia/.conda/envs/phantom/lib/libpython3.12.so
+lib/libPhantom.so: /usr/lib/gcc/x86_64-linux-gnu/11/libgomp.so
+lib/libPhantom.so: /usr/lib/x86_64-linux-gnu/libpthread.a
 lib/libPhantom.so: src/CMakeFiles/Phantom.dir/cmake_device_link.o
 lib/libPhantom.so: src/CMakeFiles/Phantom.dir/linkLibs.rsp
 lib/libPhantom.so: src/CMakeFiles/Phantom.dir/objects1.rsp
 lib/libPhantom.so: src/CMakeFiles/Phantom.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/sandia/codex/phantom-fhe/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Linking CUDA shared library ../lib/libPhantom.so"
-	cd /home/sandia/codex/phantom-fhe/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Phantom.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/sandia/codex/phantom-fhe-bootstrapping/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Linking CUDA shared library ../lib/libPhantom.so"
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Phantom.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src/CMakeFiles/Phantom.dir/build: lib/libPhantom.so
 .PHONY : src/CMakeFiles/Phantom.dir/build
 
 src/CMakeFiles/Phantom.dir/clean:
-	cd /home/sandia/codex/phantom-fhe/build/src && $(CMAKE_COMMAND) -P CMakeFiles/Phantom.dir/cmake_clean.cmake
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build/src && $(CMAKE_COMMAND) -P CMakeFiles/Phantom.dir/cmake_clean.cmake
 .PHONY : src/CMakeFiles/Phantom.dir/clean
 
 src/CMakeFiles/Phantom.dir/depend:
-	cd /home/sandia/codex/phantom-fhe/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sandia/codex/phantom-fhe /home/sandia/codex/phantom-fhe/src /home/sandia/codex/phantom-fhe/build /home/sandia/codex/phantom-fhe/build/src /home/sandia/codex/phantom-fhe/build/src/CMakeFiles/Phantom.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/sandia/codex/phantom-fhe-bootstrapping /home/sandia/codex/phantom-fhe-bootstrapping/src /home/sandia/codex/phantom-fhe-bootstrapping/build /home/sandia/codex/phantom-fhe-bootstrapping/build/src /home/sandia/codex/phantom-fhe-bootstrapping/build/src/CMakeFiles/Phantom.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : src/CMakeFiles/Phantom.dir/depend
 

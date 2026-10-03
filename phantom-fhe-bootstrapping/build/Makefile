@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sandia/codex/phantom-fhe
+CMAKE_SOURCE_DIR = /home/sandia/codex/phantom-fhe-bootstrapping
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sandia/codex/phantom-fhe/build
+CMAKE_BINARY_DIR = /home/sandia/codex/phantom-fhe-bootstrapping/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,9 +132,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sandia/codex/phantom-fhe/build/CMakeFiles /home/sandia/codex/phantom-fhe/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sandia/codex/phantom-fhe-bootstrapping/build/CMakeFiles /home/sandia/codex/phantom-fhe-bootstrapping/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sandia/codex/phantom-fhe/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sandia/codex/phantom-fhe-bootstrapping/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -175,32 +175,6 @@ Phantom/fast:
 .PHONY : Phantom/fast
 
 #=============================================================================
-# Target rules for targets named example_context
-
-# Build rule for target.
-example_context: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example_context
-.PHONY : example_context
-
-# fast build rule for target.
-example_context/fast:
-	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/example_context.dir/build.make examples/CMakeFiles/example_context.dir/build
-.PHONY : example_context/fast
-
-#=============================================================================
-# Target rules for targets named example_serialization
-
-# Build rule for target.
-example_serialization: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example_serialization
-.PHONY : example_serialization
-
-# fast build rule for target.
-example_serialization/fast:
-	$(MAKE) $(MAKESILENT) -f examples/CMakeFiles/example_serialization.dir/build.make examples/CMakeFiles/example_serialization.dir/build
-.PHONY : example_serialization/fast
-
-#=============================================================================
 # Target rules for targets named pyPhantom
 
 # Build rule for target.
@@ -212,6 +186,19 @@ pyPhantom: cmake_check_build_system
 pyPhantom/fast:
 	$(MAKE) $(MAKESILENT) -f python/CMakeFiles/pyPhantom.dir/build.make python/CMakeFiles/pyPhantom.dir/build
 .PHONY : pyPhantom/fast
+
+#=============================================================================
+# Target rules for targets named bootstrap
+
+# Build rule for target.
+bootstrap: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 bootstrap
+.PHONY : bootstrap
+
+# fast build rule for target.
+bootstrap/fast:
+	$(MAKE) $(MAKESILENT) -f bootstrapping/CMakeFiles/bootstrap.dir/build.make bootstrapping/CMakeFiles/bootstrap.dir/build
+.PHONY : bootstrap/fast
 
 # Help Target
 help:
@@ -226,8 +213,7 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... Phantom"
-	@echo "... example_context"
-	@echo "... example_serialization"
+	@echo "... bootstrap"
 	@echo "... pyPhantom"
 .PHONY : help
 

@@ -1,4 +1,4 @@
-python/CMakeFiles/pyPhantom.dir/src/binding.cu.o : /home/sandia/codex/phantom-fhe/python/src/binding.cu \
+python/CMakeFiles/pyPhantom.dir/src/binding.cu.o : /home/sandia/codex/phantom-fhe-bootstrapping/python/src/binding.cu \
     /usr/include/stdc-predef.h \
     /usr/include/cuda_runtime.h \
     /usr/include/crt/host_config.h \
@@ -66,6 +66,8 @@ python/CMakeFiles/pyPhantom.dir/src/binding.cu.o : /home/sandia/codex/phantom-fh
     /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
     /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
     /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+    /usr/include/x86_64-linux-gnu/bits/select2.h \
+    /usr/include/x86_64-linux-gnu/bits/select-decl.h \
     /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
     /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
     /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -73,7 +75,9 @@ python/CMakeFiles/pyPhantom.dir/src/binding.cu.o : /home/sandia/codex/phantom-fh
     /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
     /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
     /usr/include/alloca.h \
+    /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
     /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+    /usr/include/x86_64-linux-gnu/bits/stdlib.h \
     /usr/include/c++/12/bits/std_abs.h \
     /usr/include/driver_functions.h \
     /usr/include/vector_functions.h \
@@ -81,6 +85,8 @@ python/CMakeFiles/pyPhantom.dir/src/binding.cu.o : /home/sandia/codex/phantom-fh
     /usr/include/crt/common_functions.h \
     /usr/include/string.h \
     /usr/include/strings.h \
+    /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
+    /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
     /usr/include/time.h \
     /usr/include/x86_64-linux-gnu/bits/time.h \
     /usr/include/x86_64-linux-gnu/bits/timex.h \
@@ -98,6 +104,9 @@ python/CMakeFiles/pyPhantom.dir/src/binding.cu.o : /home/sandia/codex/phantom-fh
     /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
     /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
     /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+    /usr/include/x86_64-linux-gnu/bits/stdio2-decl.h \
+    /usr/include/x86_64-linux-gnu/bits/stdio.h \
+    /usr/include/x86_64-linux-gnu/bits/stdio2.h \
     /usr/include/assert.h \
     /usr/include/crt/math_functions.h \
     /usr/include/c++/12/math.h \
@@ -180,11 +189,11 @@ python/CMakeFiles/pyPhantom.dir/src/binding.cu.o : /home/sandia/codex/phantom-fh
     /usr/include/c++/12/utility \
     /usr/include/c++/12/bits/stl_relops.h \
     /usr/include/c++/12/initializer_list \
-    /home/sandia/codex/phantom-fhe/python/pybind11/include/pybind11/pybind11.h \
-    /home/sandia/codex/phantom-fhe/python/pybind11/include/pybind11/detail/class.h \
-    /home/sandia/codex/phantom-fhe/python/pybind11/include/pybind11/attr.h \
-    /home/sandia/codex/phantom-fhe/python/pybind11/include/pybind11/detail/common.h \
-    /home/sandia/codex/phantom-fhe/python/pybind11/include/pybind11/conduit/wrap_include_python_h.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/python/pybind11/include/pybind11/pybind11.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/python/pybind11/include/pybind11/detail/class.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/python/pybind11/include/pybind11/attr.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/python/pybind11/include/pybind11/detail/common.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/python/pybind11/include/pybind11/conduit/wrap_include_python_h.h \
     /home/sandia/.conda/envs/phantom/include/python3.12/Python.h \
     /home/sandia/.conda/envs/phantom/include/python3.12/patchlevel.h \
     /home/sandia/.conda/envs/phantom/include/python3.12/pyconfig.h \
@@ -202,12 +211,16 @@ python/CMakeFiles/pyPhantom.dir/src/binding.cu.o : /home/sandia/codex/phantom-fh
     /usr/include/x86_64-linux-gnu/bits/confname.h \
     /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
     /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
+    /usr/include/x86_64-linux-gnu/bits/unistd.h \
+    /usr/include/x86_64-linux-gnu/bits/unistd-decl.h \
     /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
     /usr/include/linux/close_range.h \
     /usr/include/wchar.h \
     /usr/include/x86_64-linux-gnu/bits/wchar.h \
     /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
     /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
+    /usr/include/x86_64-linux-gnu/bits/wchar2-decl.h \
+    /usr/include/x86_64-linux-gnu/bits/wchar2.h \
     /home/sandia/.conda/envs/phantom/include/python3.12/pyport.h \
     /usr/include/inttypes.h \
     /usr/lib/gcc/x86_64-linux-gnu/12/include/stdint.h \
@@ -436,11 +449,11 @@ python/CMakeFiles/pyPhantom.dir/src/binding.cu.o : /home/sandia/codex/phantom-fh
     /usr/include/c++/12/bits/stl_bvector.h \
     /usr/include/c++/12/bits/vector.tcc \
     /usr/include/c++/12/version \
-    /home/sandia/codex/phantom-fhe/python/pybind11/include/pybind11/cast.h \
-    /home/sandia/codex/phantom-fhe/python/pybind11/include/pybind11/detail/descr.h \
-    /home/sandia/codex/phantom-fhe/python/pybind11/include/pybind11/detail/type_caster_base.h \
-    /home/sandia/codex/phantom-fhe/python/pybind11/include/pybind11/pytypes.h \
-    /home/sandia/codex/phantom-fhe/python/pybind11/include/pybind11/buffer_info.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/python/pybind11/include/pybind11/cast.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/python/pybind11/include/pybind11/detail/descr.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/python/pybind11/include/pybind11/detail/type_caster_base.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/python/pybind11/include/pybind11/pytypes.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/python/pybind11/include/pybind11/buffer_info.h \
     /usr/include/c++/12/iterator \
     /usr/include/c++/12/bits/stream_iterator.h \
     /usr/include/c++/12/bits/streambuf_iterator.h \
@@ -452,9 +465,9 @@ python/CMakeFiles/pyPhantom.dir/src/binding.cu.o : /home/sandia/codex/phantom-fh
     /usr/include/x86_64-linux-gnu/c++/12/bits/error_constants.h \
     /usr/include/c++/12/bits/streambuf.tcc \
     /usr/include/c++/12/optional \
-    /home/sandia/codex/phantom-fhe/python/pybind11/include/pybind11/detail/cpp_conduit.h \
-    /home/sandia/codex/phantom-fhe/python/pybind11/include/pybind11/detail/internals.h \
-    /home/sandia/codex/phantom-fhe/python/pybind11/include/pybind11/conduit/pybind11_platform_abi_id.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/python/pybind11/include/pybind11/detail/cpp_conduit.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/python/pybind11/include/pybind11/detail/internals.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/python/pybind11/include/pybind11/conduit/pybind11_platform_abi_id.h \
     /usr/include/c++/12/mutex \
     /usr/include/c++/12/bits/chrono.h \
     /usr/include/c++/12/ratio \
@@ -465,10 +478,10 @@ python/CMakeFiles/pyPhantom.dir/src/binding.cu.o : /home/sandia/codex/phantom-fh
     /usr/include/c++/12/thread \
     /usr/include/c++/12/bits/std_thread.h \
     /usr/include/c++/12/bits/this_thread_sleep.h \
-    /home/sandia/codex/phantom-fhe/python/pybind11/include/pybind11/detail/typeid.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/python/pybind11/include/pybind11/detail/typeid.h \
     /usr/include/c++/12/cxxabi.h \
     /usr/include/x86_64-linux-gnu/c++/12/bits/cxxabi_tweaks.h \
-    /home/sandia/codex/phantom-fhe/python/pybind11/include/pybind11/detail/value_and_holder.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/python/pybind11/include/pybind11/detail/value_and_holder.h \
     /usr/include/c++/12/array \
     /usr/include/c++/12/compare \
     /usr/include/c++/12/functional \
@@ -477,16 +490,16 @@ python/CMakeFiles/pyPhantom.dir/src/binding.cu.o : /home/sandia/codex/phantom-fh
     /usr/include/c++/12/bits/algorithmfwd.h \
     /usr/include/c++/12/bits/stl_heap.h \
     /usr/include/c++/12/bits/uniform_int_dist.h \
-    /home/sandia/codex/phantom-fhe/python/pybind11/include/pybind11/options.h \
-    /home/sandia/codex/phantom-fhe/python/pybind11/include/pybind11/detail/exception_translation.h \
-    /home/sandia/codex/phantom-fhe/python/pybind11/include/pybind11/detail/init.h \
-    /home/sandia/codex/phantom-fhe/python/pybind11/include/pybind11/gil.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/python/pybind11/include/pybind11/options.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/python/pybind11/include/pybind11/detail/exception_translation.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/python/pybind11/include/pybind11/detail/init.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/python/pybind11/include/pybind11/gil.h \
     /usr/include/c++/12/cassert \
-    /home/sandia/codex/phantom-fhe/python/pybind11/include/pybind11/gil_safe_call_once.h \
-    /home/sandia/codex/phantom-fhe/python/pybind11/include/pybind11/typing.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/python/pybind11/include/pybind11/gil_safe_call_once.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/python/pybind11/include/pybind11/typing.h \
     /usr/include/c++/12/algorithm \
     /usr/include/c++/12/pstl/glue_algorithm_defs.h \
-    /home/sandia/codex/phantom-fhe/python/pybind11/include/pybind11/stl.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/python/pybind11/include/pybind11/stl.h \
     /usr/include/c++/12/deque \
     /usr/include/c++/12/bits/stl_deque.h \
     /usr/include/c++/12/bits/deque.tcc \
@@ -523,19 +536,27 @@ python/CMakeFiles/pyPhantom.dir/src/binding.cu.o : /home/sandia/codex/phantom-fh
     /usr/include/c++/12/bits/mask_array.h \
     /usr/include/c++/12/bits/indirect_array.h \
     /usr/include/c++/12/variant \
-    /home/sandia/codex/phantom-fhe/include/phantom.h \
-    /home/sandia/codex/phantom-fhe/include/context.cuh \
-    /home/sandia/codex/phantom-fhe/include/host/encryptionparams.h \
-    /home/sandia/codex/phantom-fhe/include/host/modulus.h \
-    /home/sandia/codex/phantom-fhe/include/host/defines.h \
-    /usr/include/cuda.h \
-    /home/sandia/codex/phantom-fhe/include/host/hestdparms.h \
-    /usr/include/c++/12/iostream \
+    /home/sandia/codex/phantom-fhe-bootstrapping/python/pybind11/include/pybind11/numpy.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/python/pybind11/include/pybind11/complex.h \
+    /usr/include/c++/12/complex \
+    /usr/include/c++/12/sstream \
     /usr/include/c++/12/istream \
     /usr/include/c++/12/bits/istream.tcc \
-    /home/sandia/codex/phantom-fhe/include/host/hash.h \
-    /home/sandia/codex/phantom-fhe/include/host/blake2.h \
-    /home/sandia/codex/phantom-fhe/include/host/common.h \
+    /usr/include/c++/12/bits/sstream.tcc \
+    /usr/include/c++/12/numeric \
+    /usr/include/c++/12/bits/stl_numeric.h \
+    /usr/include/c++/12/pstl/glue_numeric_defs.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/phantom.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/context.cuh \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/host/encryptionparams.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/host/modulus.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/host/defines.h \
+    /usr/include/cuda.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/host/hestdparms.h \
+    /usr/include/c++/12/iostream \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/host/hash.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/host/blake2.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/host/common.h \
     /usr/include/cuda/std/type_traits \
     /usr/include/cuda/std/cstddef \
     /usr/include/cuda/std/version \
@@ -554,8 +575,8 @@ python/CMakeFiles/pyPhantom.dir/src/binding.cu.o : /home/sandia/codex/phantom-fh
     /usr/include/cuda/std/detail/libcxx/include/__pragma_pop \
     /usr/include/cuda/std/detail/libcxx/include/cstddef \
     /usr/include/cuda/std/detail/libcxx/include/type_traits \
-    /home/sandia/codex/phantom-fhe/include/host/globals.h \
-    /home/sandia/codex/phantom-fhe/include/cuda_wrapper.cuh \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/host/globals.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/cuda_wrapper.cuh \
     /usr/include/c++/12/chrono \
     /usr/include/c++/12/iomanip \
     /usr/include/c++/12/locale \
@@ -567,57 +588,36 @@ python/CMakeFiles/pyPhantom.dir/src/binding.cu.o : /home/sandia/codex/phantom-fh
     /usr/include/c++/12/bits/locale_facets_nonio.tcc \
     /usr/include/c++/12/bits/locale_conv.h \
     /usr/include/c++/12/bits/quoted_string.h \
-    /usr/include/c++/12/sstream \
-    /usr/include/c++/12/bits/sstream.tcc \
-    /usr/include/c++/12/numeric \
-    /usr/include/c++/12/bits/stl_numeric.h \
-    /usr/include/c++/12/pstl/glue_numeric_defs.h \
     /usr/include/c++/12/random \
     /usr/include/c++/12/bits/random.h \
     /usr/include/x86_64-linux-gnu/c++/12/bits/opt_random.h \
     /usr/include/c++/12/bits/random.tcc \
-    /home/sandia/codex/phantom-fhe/include/host/ntt.h \
-    /home/sandia/codex/phantom-fhe/include/host/uintarithsmallmod.h \
-    /home/sandia/codex/phantom-fhe/include/host/numth.h \
-    /home/sandia/codex/phantom-fhe/include/host/uintarith.h \
-    /home/sandia/codex/phantom-fhe/include/host/uintcore.h \
-    /home/sandia/codex/phantom-fhe/include/host/rns.h \
-    /home/sandia/codex/phantom-fhe/include/galois.cuh \
-    /home/sandia/codex/phantom-fhe/include/ntt.cuh \
-    /home/sandia/codex/phantom-fhe/include/uintmath.cuh \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/host/ntt.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/host/uintarithsmallmod.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/host/numth.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/host/uintarith.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/host/uintcore.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/host/rns.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/galois.cuh \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/ntt.cuh \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/uintmath.cuh \
     /usr/include/cuComplex.h \
-    /home/sandia/codex/phantom-fhe/include/common.h \
-    /home/sandia/codex/phantom-fhe/include/rns.cuh \
-    /home/sandia/codex/phantom-fhe/include/rns_base.cuh \
-    /home/sandia/codex/phantom-fhe/include/rns_bconv.cuh \
-    /home/sandia/codex/phantom-fhe/include/util.cuh \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/common.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/util.cuh \
     /usr/include/curand.h \
-    /home/sandia/codex/phantom-fhe/include/batchencoder.h \
-    /home/sandia/codex/phantom-fhe/include/plaintext.h \
-    /home/sandia/codex/phantom-fhe/include/polymath.cuh \
-    /home/sandia/codex/phantom-fhe/include/uintmodmath.cuh \
-    /home/sandia/codex/phantom-fhe/include/secretkey.h \
-    /home/sandia/codex/phantom-fhe/include/ciphertext.h \
-    /home/sandia/codex/phantom-fhe/include/prng.cuh \
-    /usr/include/x86_64-linux-gnu/gmp.h \
-    /usr/include/curand_kernel.h \
-    /usr/include/curand_discrete.h \
-    /usr/include/curand_precalc.h \
-    /usr/include/curand_mrg32k3a.h \
-    /usr/include/curand_mtgp32_kernel.h \
-    /usr/include/memory.h \
-    /usr/include/curand_mtgp32.h \
-    /usr/include/curand_philox4x32_x.h \
-    /usr/include/curand_globals.h \
-    /usr/include/curand_uniform.h \
-    /usr/include/curand_normal.h \
-    /usr/include/curand_normal_static.h \
-    /usr/include/curand_lognormal.h \
-    /usr/include/curand_poisson.h \
-    /usr/include/curand_discrete2.h \
-    /home/sandia/codex/phantom-fhe/include/evaluate.cuh \
-    /home/sandia/codex/phantom-fhe/include/ckks.h \
-    /home/sandia/codex/phantom-fhe/include/fft.h \
-    /home/sandia/codex/phantom-fhe/python/pybind11/include/pybind11/numpy.h \
-    /home/sandia/codex/phantom-fhe/python/pybind11/include/pybind11/complex.h \
-    /usr/include/c++/12/complex
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/error_handle.cuh \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/rns.cuh \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/rns_base.cuh \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/rns_bconv.cuh \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/batchencoder.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/plaintext.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/polymath.cuh \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/uintmodmath.cuh \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/secretkey.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/ciphertext.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/prng.cuh \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/evaluate.cuh \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/relinearization_timing.cuh \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/ckks.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/fft.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/bootstrap.cuh

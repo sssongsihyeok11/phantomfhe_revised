@@ -60,8 +60,7 @@ add_library(phantom::Phantom SHARED IMPORTED)
 
 set_target_properties(phantom::Phantom PROPERTIES
   INTERFACE_COMPILE_FEATURES "cxx_std_17;cuda_std_17"
-  INTERFACE_INCLUDE_DIRECTORIES "/home/sandia/.conda/envs/phantom/include/python3.12"
-  INTERFACE_LINK_LIBRARIES "Python3::Python"
+  INTERFACE_LINK_LIBRARIES "OpenMP::OpenMP_CXX"
 )
 
 if(CMAKE_VERSION VERSION_LESS 2.8.12)

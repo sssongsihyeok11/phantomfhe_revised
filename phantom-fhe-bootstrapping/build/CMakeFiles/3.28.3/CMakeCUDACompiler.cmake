@@ -64,7 +64,7 @@ set(CMAKE_CUDA_HOST_IMPLICIT_LINK_LIBRARIES "")
 set(CMAKE_CUDA_HOST_IMPLICIT_LINK_DIRECTORIES "/usr/lib/x86_64-linux-gnu/stubs;/usr/lib/x86_64-linux-gnu")
 set(CMAKE_CUDA_HOST_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")
 
-set(CMAKE_CUDA_IMPLICIT_INCLUDE_DIRECTORIES "/home/sandia/.conda/envs/phantom/include;/usr/include/c++/12;/usr/include/x86_64-linux-gnu/c++/12;/usr/include/c++/12/backward;/usr/lib/gcc/x86_64-linux-gnu/12/include;/usr/local/include;/usr/include/x86_64-linux-gnu;/usr/include")
+set(CMAKE_CUDA_IMPLICIT_INCLUDE_DIRECTORIES "/usr/include/c++/12;/usr/include/x86_64-linux-gnu/c++/12;/usr/include/c++/12/backward;/usr/lib/gcc/x86_64-linux-gnu/12/include;/usr/local/include;/usr/include/x86_64-linux-gnu;/usr/include")
 set(CMAKE_CUDA_IMPLICIT_LINK_LIBRARIES "stdc++;m;gcc_s;gcc;c;gcc_s;gcc")
 set(CMAKE_CUDA_IMPLICIT_LINK_DIRECTORIES "/usr/lib/x86_64-linux-gnu/stubs;/usr/lib/x86_64-linux-gnu;/usr/lib/gcc/x86_64-linux-gnu/12;/usr/lib;/lib/x86_64-linux-gnu;/lib")
 set(CMAKE_CUDA_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")

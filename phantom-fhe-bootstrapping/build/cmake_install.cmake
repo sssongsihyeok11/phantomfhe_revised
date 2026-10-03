@@ -1,4 +1,4 @@
-# Install script for directory: /home/sandia/codex/phantom-fhe
+# Install script for directory: /home/sandia/codex/phantom-fhe-bootstrapping
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "")
+    set(CMAKE_INSTALL_CONFIG_NAME "Release")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -44,17 +44,17 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/sandia/codex/phantom-fhe/build/src/cmake_install.cmake")
+  include("/home/sandia/codex/phantom-fhe-bootstrapping/build/src/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/sandia/codex/phantom-fhe/build/examples/cmake_install.cmake")
+  include("/home/sandia/codex/phantom-fhe-bootstrapping/build/python/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/sandia/codex/phantom-fhe/build/python/cmake_install.cmake")
+  include("/home/sandia/codex/phantom-fhe-bootstrapping/build/bootstrapping/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -64,12 +64,12 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libPhantom.so"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/sandia/codex/phantom-fhe/build/lib/libPhantom.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/sandia/codex/phantom-fhe-bootstrapping/build/lib/libPhantom.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libPhantom.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libPhantom.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libPhantom.so"
-         OLD_RPATH "/home/sandia/.conda/envs/phantom/lib:"
+         OLD_RPATH "/usr/lib/gcc/x86_64-linux-gnu/11:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libPhantom.so")
@@ -84,7 +84,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/phantom/PhantomConfig.cmake")
     file(DIFFERENT _cmake_export_file_changed FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/phantom/PhantomConfig.cmake"
-         "/home/sandia/codex/phantom-fhe/build/CMakeFiles/Export/d0a1cc895b9584f1f081c8d3ec6dfdc7/PhantomConfig.cmake")
+         "/home/sandia/codex/phantom-fhe-bootstrapping/build/CMakeFiles/Export/d0a1cc895b9584f1f081c8d3ec6dfdc7/PhantomConfig.cmake")
     if(_cmake_export_file_changed)
       file(GLOB _cmake_old_config_files "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/phantom/PhantomConfig-*.cmake")
       if(_cmake_old_config_files)
@@ -97,14 +97,14 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
     endif()
     unset(_cmake_export_file_changed)
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/phantom" TYPE FILE FILES "/home/sandia/codex/phantom-fhe/build/CMakeFiles/Export/d0a1cc895b9584f1f081c8d3ec6dfdc7/PhantomConfig.cmake")
-  if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^()$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/phantom" TYPE FILE FILES "/home/sandia/codex/phantom-fhe/build/CMakeFiles/Export/d0a1cc895b9584f1f081c8d3ec6dfdc7/PhantomConfig-noconfig.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/phantom" TYPE FILE FILES "/home/sandia/codex/phantom-fhe-bootstrapping/build/CMakeFiles/Export/d0a1cc895b9584f1f081c8d3ec6dfdc7/PhantomConfig.cmake")
+  if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/phantom" TYPE FILE FILES "/home/sandia/codex/phantom-fhe-bootstrapping/build/CMakeFiles/Export/d0a1cc895b9584f1f081c8d3ec6dfdc7/PhantomConfig-release.cmake")
   endif()
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/phantom" TYPE DIRECTORY FILES "/home/sandia/codex/phantom-fhe/include/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/phantom" TYPE DIRECTORY FILES "/home/sandia/codex/phantom-fhe-bootstrapping/include/")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -115,5 +115,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/sandia/codex/phantom-fhe/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/sandia/codex/phantom-fhe-bootstrapping/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -1,1 +1,0 @@
-/usr/lib/nvidia-cuda-toolkit/bin/g++ @CMakeFiles/bootstrap.dir/objects1.rsp CMakeFiles/bootstrap.dir/cmake_device_link.o -o ../bin/bootstrap @CMakeFiles/bootstrap.dir/linkLibs.rsp -L"/usr/lib/x86_64-linux-gnu/stubs" -L"/usr/lib/x86_64-linux-gnu"

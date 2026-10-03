@@ -1,4 +1,4 @@
-src/CMakeFiles/Phantom.dir/ckks.cu.o : /home/sandia/codex/phantom-fhe/src/ckks.cu \
+src/CMakeFiles/Phantom.dir/ckks.cu.o : /home/sandia/codex/phantom-fhe-bootstrapping/src/ckks.cu \
     /usr/include/stdc-predef.h \
     /usr/include/cuda_runtime.h \
     /usr/include/crt/host_config.h \
@@ -66,6 +66,8 @@ src/CMakeFiles/Phantom.dir/ckks.cu.o : /home/sandia/codex/phantom-fhe/src/ckks.c
     /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
     /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
     /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+    /usr/include/x86_64-linux-gnu/bits/select2.h \
+    /usr/include/x86_64-linux-gnu/bits/select-decl.h \
     /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
     /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
     /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
@@ -73,7 +75,9 @@ src/CMakeFiles/Phantom.dir/ckks.cu.o : /home/sandia/codex/phantom-fhe/src/ckks.c
     /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
     /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
     /usr/include/alloca.h \
+    /usr/include/x86_64-linux-gnu/bits/stdlib-bsearch.h \
     /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+    /usr/include/x86_64-linux-gnu/bits/stdlib.h \
     /usr/include/c++/12/bits/std_abs.h \
     /usr/include/driver_functions.h \
     /usr/include/vector_functions.h \
@@ -81,6 +85,8 @@ src/CMakeFiles/Phantom.dir/ckks.cu.o : /home/sandia/codex/phantom-fhe/src/ckks.c
     /usr/include/crt/common_functions.h \
     /usr/include/string.h \
     /usr/include/strings.h \
+    /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
+    /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
     /usr/include/time.h \
     /usr/include/x86_64-linux-gnu/bits/time.h \
     /usr/include/x86_64-linux-gnu/bits/timex.h \
@@ -98,6 +104,9 @@ src/CMakeFiles/Phantom.dir/ckks.cu.o : /home/sandia/codex/phantom-fhe/src/ckks.c
     /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
     /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
     /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+    /usr/include/x86_64-linux-gnu/bits/stdio2-decl.h \
+    /usr/include/x86_64-linux-gnu/bits/stdio.h \
+    /usr/include/x86_64-linux-gnu/bits/stdio2.h \
     /usr/include/assert.h \
     /usr/include/crt/math_functions.h \
     /usr/include/c++/12/math.h \
@@ -180,26 +189,24 @@ src/CMakeFiles/Phantom.dir/ckks.cu.o : /home/sandia/codex/phantom-fhe/src/ckks.c
     /usr/include/c++/12/utility \
     /usr/include/c++/12/bits/stl_relops.h \
     /usr/include/c++/12/initializer_list \
-    /home/sandia/codex/phantom-fhe/include/ckks.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/ckks.h \
     /usr/include/cuComplex.h \
-    /usr/include/c++/12/chrono \
-    /usr/include/c++/12/bits/chrono.h \
-    /usr/include/c++/12/ratio \
-    /usr/include/c++/12/cstdint \
-    /usr/lib/gcc/x86_64-linux-gnu/12/include/stdint.h \
-    /usr/include/stdint.h \
-    /usr/include/x86_64-linux-gnu/bits/wchar.h \
-    /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
-    /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
-    /usr/include/c++/12/ctime \
-    /usr/include/c++/12/bits/parse_numbers.h \
-    /home/sandia/codex/phantom-fhe/include/context.cuh \
+    /usr/include/c++/12/optional \
+    /usr/include/c++/12/exception \
+    /usr/include/c++/12/bits/exception_ptr.h \
+    /usr/include/c++/12/bits/cxxabi_init_exception.h \
+    /usr/include/c++/12/typeinfo \
+    /usr/include/c++/12/bits/hash_bytes.h \
+    /usr/include/c++/12/bits/nested_exception.h \
+    /usr/include/c++/12/bits/enable_special_members.h \
+    /usr/include/c++/12/bits/functional_hash.h \
+    /usr/include/c++/12/bits/stl_construct.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/context.cuh \
     /usr/include/c++/12/memory \
     /usr/include/c++/12/bits/allocator.h \
     /usr/include/x86_64-linux-gnu/c++/12/bits/c++allocator.h \
     /usr/include/c++/12/bits/new_allocator.h \
     /usr/include/c++/12/bits/memoryfwd.h \
-    /usr/include/c++/12/bits/stl_construct.h \
     /usr/include/c++/12/bits/stl_uninitialized.h \
     /usr/include/c++/12/ext/alloc_traits.h \
     /usr/include/c++/12/bits/alloc_traits.h \
@@ -207,14 +214,17 @@ src/CMakeFiles/Phantom.dir/ckks.cu.o : /home/sandia/codex/phantom-fhe/src/ckks.c
     /usr/include/c++/12/bits/stl_raw_storage_iter.h \
     /usr/include/c++/12/bits/align.h \
     /usr/include/c++/12/bit \
+    /usr/lib/gcc/x86_64-linux-gnu/12/include/stdint.h \
+    /usr/include/stdint.h \
+    /usr/include/x86_64-linux-gnu/bits/wchar.h \
+    /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+    /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
     /usr/include/c++/12/bits/uses_allocator.h \
     /usr/include/c++/12/bits/unique_ptr.h \
     /usr/include/c++/12/tuple \
     /usr/include/c++/12/bits/invoke.h \
     /usr/include/c++/12/bits/stl_function.h \
     /usr/include/c++/12/backward/binders.h \
-    /usr/include/c++/12/bits/functional_hash.h \
-    /usr/include/c++/12/bits/hash_bytes.h \
     /usr/include/c++/12/bits/shared_ptr.h \
     /usr/include/c++/12/iosfwd \
     /usr/include/c++/12/bits/stringfwd.h \
@@ -223,8 +233,9 @@ src/CMakeFiles/Phantom.dir/ckks.cu.o : /home/sandia/codex/phantom-fhe/src/ckks.c
     /usr/include/wchar.h \
     /usr/include/x86_64-linux-gnu/bits/types/wint_t.h \
     /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h \
+    /usr/include/x86_64-linux-gnu/bits/wchar2-decl.h \
+    /usr/include/x86_64-linux-gnu/bits/wchar2.h \
     /usr/include/c++/12/bits/shared_ptr_base.h \
-    /usr/include/c++/12/typeinfo \
     /usr/include/c++/12/bits/allocated_ptr.h \
     /usr/include/c++/12/bits/refwrap.h \
     /usr/include/c++/12/ext/aligned_buffer.h \
@@ -241,25 +252,22 @@ src/CMakeFiles/Phantom.dir/ckks.cu.o : /home/sandia/codex/phantom-fhe/src/ckks.c
     /usr/include/x86_64-linux-gnu/c++/12/bits/atomic_word.h \
     /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
     /usr/include/c++/12/ext/concurrence.h \
-    /usr/include/c++/12/exception \
-    /usr/include/c++/12/bits/exception_ptr.h \
-    /usr/include/c++/12/bits/cxxabi_init_exception.h \
-    /usr/include/c++/12/bits/nested_exception.h \
     /usr/include/c++/12/bits/shared_ptr_atomic.h \
     /usr/include/c++/12/bits/atomic_base.h \
     /usr/include/c++/12/bits/atomic_lockfree_defines.h \
     /usr/include/c++/12/backward/auto_ptr.h \
     /usr/include/c++/12/pstl/glue_memory_defs.h \
     /usr/include/c++/12/pstl/execution_defs.h \
-    /home/sandia/codex/phantom-fhe/include/host/encryptionparams.h \
-    /home/sandia/codex/phantom-fhe/include/host/modulus.h \
-    /home/sandia/codex/phantom-fhe/include/host/defines.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/host/encryptionparams.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/host/modulus.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/host/defines.h \
     /usr/include/cuda.h \
-    /home/sandia/codex/phantom-fhe/include/host/hestdparms.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/host/hestdparms.h \
     /usr/include/c++/12/cstddef \
     /usr/include/c++/12/array \
     /usr/include/c++/12/compare \
     /usr/include/c++/12/bits/range_access.h \
+    /usr/include/c++/12/cstdint \
     /usr/include/c++/12/iostream \
     /usr/include/c++/12/ostream \
     /usr/include/c++/12/ios \
@@ -314,9 +322,9 @@ src/CMakeFiles/Phantom.dir/ckks.cu.o : /home/sandia/codex/phantom-fhe/src/ckks.c
     /usr/include/c++/12/bits/stl_vector.h \
     /usr/include/c++/12/bits/stl_bvector.h \
     /usr/include/c++/12/bits/vector.tcc \
-    /home/sandia/codex/phantom-fhe/include/host/hash.h \
-    /home/sandia/codex/phantom-fhe/include/host/blake2.h \
-    /home/sandia/codex/phantom-fhe/include/host/common.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/host/hash.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/host/blake2.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/host/common.h \
     /usr/include/c++/12/algorithm \
     /usr/include/c++/12/bits/stl_algo.h \
     /usr/include/c++/12/bits/algorithmfwd.h \
@@ -341,14 +349,19 @@ src/CMakeFiles/Phantom.dir/ckks.cu.o : /home/sandia/codex/phantom-fhe/src/ckks.c
     /usr/include/cuda/std/detail/libcxx/include/__pragma_pop \
     /usr/include/cuda/std/detail/libcxx/include/cstddef \
     /usr/include/cuda/std/detail/libcxx/include/type_traits \
-    /home/sandia/codex/phantom-fhe/include/host/globals.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/host/globals.h \
     /usr/include/c++/12/map \
     /usr/include/c++/12/bits/stl_tree.h \
     /usr/include/c++/12/bits/node_handle.h \
     /usr/include/c++/12/bits/stl_map.h \
     /usr/include/c++/12/bits/stl_multimap.h \
     /usr/include/c++/12/bits/erase_if.h \
-    /home/sandia/codex/phantom-fhe/include/cuda_wrapper.cuh \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/cuda_wrapper.cuh \
+    /usr/include/c++/12/chrono \
+    /usr/include/c++/12/bits/chrono.h \
+    /usr/include/c++/12/ratio \
+    /usr/include/c++/12/ctime \
+    /usr/include/c++/12/bits/parse_numbers.h \
     /usr/include/c++/12/iomanip \
     /usr/include/c++/12/locale \
     /usr/include/c++/12/bits/locale_facets_nonio.h \
@@ -373,225 +386,27 @@ src/CMakeFiles/Phantom.dir/ckks.cu.o : /home/sandia/codex/phantom-fhe/src/ckks.c
     /usr/include/c++/12/unordered_map \
     /usr/include/c++/12/bits/hashtable.h \
     /usr/include/c++/12/bits/hashtable_policy.h \
-    /usr/include/c++/12/bits/enable_special_members.h \
     /usr/include/c++/12/bits/unordered_map.h \
-    /home/sandia/codex/phantom-fhe/include/host/ntt.h \
-    /home/sandia/codex/phantom-fhe/include/host/uintarithsmallmod.h \
-    /home/sandia/codex/phantom-fhe/include/host/numth.h \
-    /home/sandia/codex/phantom-fhe/include/host/uintarith.h \
-    /home/sandia/codex/phantom-fhe/include/host/uintcore.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/host/ntt.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/host/uintarithsmallmod.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/host/numth.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/host/uintarith.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/host/uintcore.h \
     /usr/include/c++/12/cstring \
-    /home/sandia/codex/phantom-fhe/include/host/rns.h \
-    /home/sandia/codex/phantom-fhe/include/galois.cuh \
-    /home/sandia/codex/phantom-fhe/include/ntt.cuh \
-    /home/sandia/codex/phantom-fhe/include/uintmath.cuh \
-    /home/sandia/codex/phantom-fhe/include/common.h \
-    /home/sandia/codex/phantom-fhe/include/rns.cuh \
-    /home/sandia/codex/phantom-fhe/include/rns_base.cuh \
-    /home/sandia/codex/phantom-fhe/include/rns_bconv.cuh \
-    /home/sandia/codex/phantom-fhe/include/util.cuh \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/host/rns.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/galois.cuh \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/ntt.cuh \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/uintmath.cuh \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/common.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/util.cuh \
+    /usr/include/c++/12/complex \
     /usr/include/curand.h \
-    /home/sandia/codex/phantom-fhe/include/fft.h \
-    /home/sandia/codex/phantom-fhe/include/plaintext.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/error_handle.cuh \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/rns.cuh \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/rns_base.cuh \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/rns_bconv.cuh \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/fft.h \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/plaintext.h \
     /usr/include/c++/12/cassert \
-    /home/sandia/codex/phantom-fhe/include/polymath.cuh \
-    /home/sandia/codex/phantom-fhe/include/uintmodmath.cuh \
-    /home/sandia/.conda/envs/phantom/include/pybind11/pybind11.h \
-    /home/sandia/.conda/envs/phantom/include/pybind11/detail/class.h \
-    /home/sandia/.conda/envs/phantom/include/pybind11/attr.h \
-    /home/sandia/.conda/envs/phantom/include/pybind11/detail/common.h \
-    /home/sandia/.conda/envs/phantom/include/pybind11/conduit/wrap_include_python_h.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/Python.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/patchlevel.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/pyconfig.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/pymacconfig.h \
-    /usr/include/unistd.h \
-    /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
-    /usr/include/x86_64-linux-gnu/bits/environments.h \
-    /usr/include/x86_64-linux-gnu/bits/confname.h \
-    /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
-    /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
-    /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
-    /usr/include/linux/close_range.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/pyport.h \
-    /usr/include/inttypes.h \
-    /usr/include/x86_64-linux-gnu/sys/time.h \
-    /usr/include/x86_64-linux-gnu/sys/stat.h \
-    /usr/include/x86_64-linux-gnu/bits/stat.h \
-    /usr/include/x86_64-linux-gnu/bits/struct_stat.h \
-    /usr/include/x86_64-linux-gnu/bits/statx.h \
-    /usr/include/linux/stat.h \
-    /usr/include/linux/types.h \
-    /usr/include/x86_64-linux-gnu/asm/types.h \
-    /usr/include/asm-generic/types.h \
-    /usr/include/asm-generic/int-ll64.h \
-    /usr/include/x86_64-linux-gnu/asm/bitsperlong.h \
-    /usr/include/asm-generic/bitsperlong.h \
-    /usr/include/linux/posix_types.h \
-    /usr/include/linux/stddef.h \
-    /usr/include/x86_64-linux-gnu/asm/posix_types.h \
-    /usr/include/x86_64-linux-gnu/asm/posix_types_64.h \
-    /usr/include/asm-generic/posix_types.h \
-    /usr/include/x86_64-linux-gnu/bits/statx-generic.h \
-    /usr/include/x86_64-linux-gnu/bits/types/struct_statx_timestamp.h \
-    /usr/include/x86_64-linux-gnu/bits/types/struct_statx.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/exports.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/pymacro.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/pymath.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/pymem.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/cpython/pymem.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/pytypedefs.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/pybuffer.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/object.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/pystats.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/cpython/object.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/objimpl.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/cpython/objimpl.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/typeslots.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/pyhash.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/cpython/pydebug.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/bytearrayobject.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/cpython/bytearrayobject.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/bytesobject.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/cpython/bytesobject.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/unicodeobject.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/cpython/unicodeobject.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/cpython/initconfig.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/pystate.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/cpython/pystate.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/pyerrors.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/cpython/pyerrors.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/longobject.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/cpython/longobject.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/cpython/longintrepr.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/boolobject.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/floatobject.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/cpython/floatobject.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/complexobject.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/cpython/complexobject.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/rangeobject.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/memoryobject.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/cpython/memoryobject.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/tupleobject.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/cpython/tupleobject.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/listobject.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/cpython/listobject.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/dictobject.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/cpython/dictobject.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/cpython/odictobject.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/enumobject.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/setobject.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/cpython/setobject.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/methodobject.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/cpython/methodobject.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/moduleobject.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/cpython/funcobject.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/cpython/classobject.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/fileobject.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/cpython/fileobject.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/pycapsule.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/cpython/code.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/pyframe.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/cpython/pyframe.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/traceback.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/cpython/traceback.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/sliceobject.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/cpython/cellobject.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/iterobject.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/cpython/genobject.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/descrobject.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/cpython/descrobject.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/genericaliasobject.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/warnings.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/cpython/warnings.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/weakrefobject.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/cpython/weakrefobject.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/structseq.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/cpython/picklebufobject.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/cpython/pytime.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/codecs.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/pythread.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/cpython/pythread.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/cpython/context.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/modsupport.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/cpython/modsupport.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/compile.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/cpython/compile.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/pythonrun.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/cpython/pythonrun.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/pylifecycle.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/cpython/pylifecycle.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/ceval.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/cpython/ceval.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/sysmodule.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/cpython/sysmodule.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/osmodule.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/intrcheck.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/import.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/cpython/import.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/abstract.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/cpython/abstract.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/bltinmodule.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/cpython/pyctype.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/pystrtod.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/pystrcmp.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/fileutils.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/cpython/fileutils.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/cpython/pyfpe.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/tracemalloc.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/frameobject.h \
-    /home/sandia/.conda/envs/phantom/include/python3.12/cpython/frameobject.h \
-    /home/sandia/.conda/envs/phantom/include/pybind11/detail/pybind11_namespace_macros.h \
-    /usr/include/c++/12/forward_list \
-    /usr/include/c++/12/bits/forward_list.h \
-    /usr/include/c++/12/bits/forward_list.tcc \
-    /usr/include/c++/12/typeindex \
-    /usr/include/c++/12/unordered_set \
-    /usr/include/c++/12/bits/unordered_set.h \
-    /usr/include/c++/12/version \
-    /home/sandia/.conda/envs/phantom/include/pybind11/cast.h \
-    /home/sandia/.conda/envs/phantom/include/pybind11/detail/argument_vector.h \
-    /home/sandia/.conda/envs/phantom/include/pybind11/pytypes.h \
-    /home/sandia/.conda/envs/phantom/include/pybind11/buffer_info.h \
-    /usr/include/c++/12/iterator \
-    /usr/include/c++/12/bits/stream_iterator.h \
-    /usr/include/c++/12/optional \
-    /home/sandia/.conda/envs/phantom/include/pybind11/detail/descr.h \
-    /home/sandia/.conda/envs/phantom/include/pybind11/detail/holder_caster_foreign_helpers.h \
-    /home/sandia/.conda/envs/phantom/include/pybind11/gil.h \
-    /home/sandia/.conda/envs/phantom/include/pybind11/detail/internals.h \
-    /home/sandia/.conda/envs/phantom/include/pybind11/conduit/pybind11_platform_abi_id.h \
-    /home/sandia/.conda/envs/phantom/include/pybind11/gil_simple.h \
-    /home/sandia/.conda/envs/phantom/include/pybind11/trampoline_self_life_support.h \
-    /home/sandia/.conda/envs/phantom/include/pybind11/detail/using_smart_holder.h \
-    /home/sandia/.conda/envs/phantom/include/pybind11/detail/struct_smart_holder.h \
-    /home/sandia/.conda/envs/phantom/include/pybind11/detail/value_and_holder.h \
-    /usr/include/c++/12/atomic \
-    /usr/include/c++/12/mutex \
-    /usr/include/c++/12/bits/std_mutex.h \
-    /usr/include/c++/12/bits/unique_lock.h \
-    /usr/include/c++/12/thread \
-    /usr/include/c++/12/bits/std_thread.h \
-    /usr/include/c++/12/bits/this_thread_sleep.h \
-    /home/sandia/.conda/envs/phantom/include/pybind11/detail/native_enum_data.h \
-    /home/sandia/.conda/envs/phantom/include/pybind11/detail/type_caster_base.h \
-    /home/sandia/.conda/envs/phantom/include/pybind11/detail/cpp_conduit.h \
-    /home/sandia/.conda/envs/phantom/include/pybind11/detail/dynamic_raw_ptr_cast_if_possible.h \
-    /home/sandia/.conda/envs/phantom/include/pybind11/detail/typeid.h \
-    /usr/include/c++/12/cxxabi.h \
-    /usr/include/x86_64-linux-gnu/c++/12/bits/cxxabi_tweaks.h \
-    /home/sandia/.conda/envs/phantom/include/pybind11/options.h \
-    /home/sandia/.conda/envs/phantom/include/pybind11/detail/exception_translation.h \
-    /home/sandia/.conda/envs/phantom/include/pybind11/detail/function_record_pyobject.h \
-    /home/sandia/.conda/envs/phantom/include/pybind11/detail/function_ref.h \
-    /home/sandia/.conda/envs/phantom/include/pybind11/detail/init.h \
-    /home/sandia/.conda/envs/phantom/include/pybind11/gil_safe_call_once.h \
-    /home/sandia/.conda/envs/phantom/include/pybind11/typing.h \
-    /usr/include/c++/12/stack \
-    /usr/include/c++/12/deque \
-    /usr/include/c++/12/bits/stl_deque.h \
-    /usr/include/c++/12/bits/deque.tcc \
-    /usr/include/c++/12/bits/stl_stack.h \
-    /home/sandia/.conda/envs/phantom/include/pybind11/numpy.h \
-    /home/sandia/.conda/envs/phantom/include/pybind11/complex.h \
-    /usr/include/c++/12/complex
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/polymath.cuh \
+    /home/sandia/codex/phantom-fhe-bootstrapping/include/uintmodmath.cuh

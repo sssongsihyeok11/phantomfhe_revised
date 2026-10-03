@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/sandia/codex/phantom-fhe
+CMAKE_SOURCE_DIR = /home/sandia/codex/phantom-fhe-bootstrapping
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/sandia/codex/phantom-fhe/build
+CMAKE_BINARY_DIR = /home/sandia/codex/phantom-fhe-bootstrapping/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,14 +132,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/sandia/codex/phantom-fhe/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/sandia/codex/phantom-fhe/build/CMakeFiles /home/sandia/codex/phantom-fhe/build/src//CMakeFiles/progress.marks
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sandia/codex/phantom-fhe/build/CMakeFiles 0
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/sandia/codex/phantom-fhe-bootstrapping/build/CMakeFiles /home/sandia/codex/phantom-fhe-bootstrapping/build/src//CMakeFiles/progress.marks
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sandia/codex/phantom-fhe-bootstrapping/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/clean
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -148,22 +148,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/sandia/codex/phantom-fhe/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/CMakeFiles/Phantom.dir/rule:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/Phantom.dir/rule
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/Phantom.dir/rule
 .PHONY : src/CMakeFiles/Phantom.dir/rule
 
 # Convenience name for target.
@@ -172,7 +172,7 @@ Phantom: src/CMakeFiles/Phantom.dir/rule
 
 # fast build rule for target.
 Phantom/fast:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/build
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/build
 .PHONY : Phantom/fast
 
 batchencoder.o: batchencoder.cu.o
@@ -180,7 +180,7 @@ batchencoder.o: batchencoder.cu.o
 
 # target to build an object file
 batchencoder.cu.o:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/batchencoder.cu.o
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/batchencoder.cu.o
 .PHONY : batchencoder.cu.o
 
 batchencoder.i: batchencoder.cu.i
@@ -188,7 +188,7 @@ batchencoder.i: batchencoder.cu.i
 
 # target to preprocess a source file
 batchencoder.cu.i:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/batchencoder.cu.i
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/batchencoder.cu.i
 .PHONY : batchencoder.cu.i
 
 batchencoder.s: batchencoder.cu.s
@@ -196,15 +196,39 @@ batchencoder.s: batchencoder.cu.s
 
 # target to generate assembly for a file
 batchencoder.cu.s:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/batchencoder.cu.s
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/batchencoder.cu.s
 .PHONY : batchencoder.cu.s
+
+bootstrap.o: bootstrap.cu.o
+.PHONY : bootstrap.o
+
+# target to build an object file
+bootstrap.cu.o:
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/bootstrap.cu.o
+.PHONY : bootstrap.cu.o
+
+bootstrap.i: bootstrap.cu.i
+.PHONY : bootstrap.i
+
+# target to preprocess a source file
+bootstrap.cu.i:
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/bootstrap.cu.i
+.PHONY : bootstrap.cu.i
+
+bootstrap.s: bootstrap.cu.s
+.PHONY : bootstrap.s
+
+# target to generate assembly for a file
+bootstrap.cu.s:
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/bootstrap.cu.s
+.PHONY : bootstrap.cu.s
 
 ckks.o: ckks.cu.o
 .PHONY : ckks.o
 
 # target to build an object file
 ckks.cu.o:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/ckks.cu.o
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/ckks.cu.o
 .PHONY : ckks.cu.o
 
 ckks.i: ckks.cu.i
@@ -212,7 +236,7 @@ ckks.i: ckks.cu.i
 
 # target to preprocess a source file
 ckks.cu.i:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/ckks.cu.i
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/ckks.cu.i
 .PHONY : ckks.cu.i
 
 ckks.s: ckks.cu.s
@@ -220,7 +244,7 @@ ckks.s: ckks.cu.s
 
 # target to generate assembly for a file
 ckks.cu.s:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/ckks.cu.s
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/ckks.cu.s
 .PHONY : ckks.cu.s
 
 context.o: context.cu.o
@@ -228,7 +252,7 @@ context.o: context.cu.o
 
 # target to build an object file
 context.cu.o:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/context.cu.o
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/context.cu.o
 .PHONY : context.cu.o
 
 context.i: context.cu.i
@@ -236,7 +260,7 @@ context.i: context.cu.i
 
 # target to preprocess a source file
 context.cu.i:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/context.cu.i
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/context.cu.i
 .PHONY : context.cu.i
 
 context.s: context.cu.s
@@ -244,15 +268,63 @@ context.s: context.cu.s
 
 # target to generate assembly for a file
 context.cu.s:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/context.cu.s
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/context.cu.s
 .PHONY : context.cu.s
+
+convolution.o: convolution.cu.o
+.PHONY : convolution.o
+
+# target to build an object file
+convolution.cu.o:
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/convolution.cu.o
+.PHONY : convolution.cu.o
+
+convolution.i: convolution.cu.i
+.PHONY : convolution.i
+
+# target to preprocess a source file
+convolution.cu.i:
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/convolution.cu.i
+.PHONY : convolution.cu.i
+
+convolution.s: convolution.cu.s
+.PHONY : convolution.s
+
+# target to generate assembly for a file
+convolution.cu.s:
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/convolution.cu.s
+.PHONY : convolution.cu.s
+
+dnn.o: dnn.cu.o
+.PHONY : dnn.o
+
+# target to build an object file
+dnn.cu.o:
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/dnn.cu.o
+.PHONY : dnn.cu.o
+
+dnn.i: dnn.cu.i
+.PHONY : dnn.i
+
+# target to preprocess a source file
+dnn.cu.i:
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/dnn.cu.i
+.PHONY : dnn.cu.i
+
+dnn.s: dnn.cu.s
+.PHONY : dnn.s
+
+# target to generate assembly for a file
+dnn.cu.s:
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/dnn.cu.s
+.PHONY : dnn.cu.s
 
 eval_key_switch.o: eval_key_switch.cu.o
 .PHONY : eval_key_switch.o
 
 # target to build an object file
 eval_key_switch.cu.o:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/eval_key_switch.cu.o
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/eval_key_switch.cu.o
 .PHONY : eval_key_switch.cu.o
 
 eval_key_switch.i: eval_key_switch.cu.i
@@ -260,7 +332,7 @@ eval_key_switch.i: eval_key_switch.cu.i
 
 # target to preprocess a source file
 eval_key_switch.cu.i:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/eval_key_switch.cu.i
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/eval_key_switch.cu.i
 .PHONY : eval_key_switch.cu.i
 
 eval_key_switch.s: eval_key_switch.cu.s
@@ -268,7 +340,7 @@ eval_key_switch.s: eval_key_switch.cu.s
 
 # target to generate assembly for a file
 eval_key_switch.cu.s:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/eval_key_switch.cu.s
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/eval_key_switch.cu.s
 .PHONY : eval_key_switch.cu.s
 
 evaluate.o: evaluate.cu.o
@@ -276,7 +348,7 @@ evaluate.o: evaluate.cu.o
 
 # target to build an object file
 evaluate.cu.o:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/evaluate.cu.o
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/evaluate.cu.o
 .PHONY : evaluate.cu.o
 
 evaluate.i: evaluate.cu.i
@@ -284,7 +356,7 @@ evaluate.i: evaluate.cu.i
 
 # target to preprocess a source file
 evaluate.cu.i:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/evaluate.cu.i
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/evaluate.cu.i
 .PHONY : evaluate.cu.i
 
 evaluate.s: evaluate.cu.s
@@ -292,7 +364,7 @@ evaluate.s: evaluate.cu.s
 
 # target to generate assembly for a file
 evaluate.cu.s:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/evaluate.cu.s
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/evaluate.cu.s
 .PHONY : evaluate.cu.s
 
 fft.o: fft.cu.o
@@ -300,7 +372,7 @@ fft.o: fft.cu.o
 
 # target to build an object file
 fft.cu.o:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/fft.cu.o
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/fft.cu.o
 .PHONY : fft.cu.o
 
 fft.i: fft.cu.i
@@ -308,7 +380,7 @@ fft.i: fft.cu.i
 
 # target to preprocess a source file
 fft.cu.i:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/fft.cu.i
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/fft.cu.i
 .PHONY : fft.cu.i
 
 fft.s: fft.cu.s
@@ -316,7 +388,7 @@ fft.s: fft.cu.s
 
 # target to generate assembly for a file
 fft.cu.s:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/fft.cu.s
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/fft.cu.s
 .PHONY : fft.cu.s
 
 galois.o: galois.cu.o
@@ -324,7 +396,7 @@ galois.o: galois.cu.o
 
 # target to build an object file
 galois.cu.o:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/galois.cu.o
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/galois.cu.o
 .PHONY : galois.cu.o
 
 galois.i: galois.cu.i
@@ -332,7 +404,7 @@ galois.i: galois.cu.i
 
 # target to preprocess a source file
 galois.cu.i:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/galois.cu.i
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/galois.cu.i
 .PHONY : galois.cu.i
 
 galois.s: galois.cu.s
@@ -340,7 +412,7 @@ galois.s: galois.cu.s
 
 # target to generate assembly for a file
 galois.cu.s:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/galois.cu.s
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/galois.cu.s
 .PHONY : galois.cu.s
 
 host/blake2b.o: host/blake2b.cu.o
@@ -348,7 +420,7 @@ host/blake2b.o: host/blake2b.cu.o
 
 # target to build an object file
 host/blake2b.cu.o:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/blake2b.cu.o
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/blake2b.cu.o
 .PHONY : host/blake2b.cu.o
 
 host/blake2b.i: host/blake2b.cu.i
@@ -356,7 +428,7 @@ host/blake2b.i: host/blake2b.cu.i
 
 # target to preprocess a source file
 host/blake2b.cu.i:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/blake2b.cu.i
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/blake2b.cu.i
 .PHONY : host/blake2b.cu.i
 
 host/blake2b.s: host/blake2b.cu.s
@@ -364,7 +436,7 @@ host/blake2b.s: host/blake2b.cu.s
 
 # target to generate assembly for a file
 host/blake2b.cu.s:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/blake2b.cu.s
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/blake2b.cu.s
 .PHONY : host/blake2b.cu.s
 
 host/blake2xb.o: host/blake2xb.cu.o
@@ -372,7 +444,7 @@ host/blake2xb.o: host/blake2xb.cu.o
 
 # target to build an object file
 host/blake2xb.cu.o:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/blake2xb.cu.o
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/blake2xb.cu.o
 .PHONY : host/blake2xb.cu.o
 
 host/blake2xb.i: host/blake2xb.cu.i
@@ -380,7 +452,7 @@ host/blake2xb.i: host/blake2xb.cu.i
 
 # target to preprocess a source file
 host/blake2xb.cu.i:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/blake2xb.cu.i
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/blake2xb.cu.i
 .PHONY : host/blake2xb.cu.i
 
 host/blake2xb.s: host/blake2xb.cu.s
@@ -388,7 +460,7 @@ host/blake2xb.s: host/blake2xb.cu.s
 
 # target to generate assembly for a file
 host/blake2xb.cu.s:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/blake2xb.cu.s
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/blake2xb.cu.s
 .PHONY : host/blake2xb.cu.s
 
 host/globals.o: host/globals.cu.o
@@ -396,7 +468,7 @@ host/globals.o: host/globals.cu.o
 
 # target to build an object file
 host/globals.cu.o:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/globals.cu.o
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/globals.cu.o
 .PHONY : host/globals.cu.o
 
 host/globals.i: host/globals.cu.i
@@ -404,7 +476,7 @@ host/globals.i: host/globals.cu.i
 
 # target to preprocess a source file
 host/globals.cu.i:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/globals.cu.i
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/globals.cu.i
 .PHONY : host/globals.cu.i
 
 host/globals.s: host/globals.cu.s
@@ -412,7 +484,7 @@ host/globals.s: host/globals.cu.s
 
 # target to generate assembly for a file
 host/globals.cu.s:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/globals.cu.s
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/globals.cu.s
 .PHONY : host/globals.cu.s
 
 host/hash.o: host/hash.cu.o
@@ -420,7 +492,7 @@ host/hash.o: host/hash.cu.o
 
 # target to build an object file
 host/hash.cu.o:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/hash.cu.o
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/hash.cu.o
 .PHONY : host/hash.cu.o
 
 host/hash.i: host/hash.cu.i
@@ -428,7 +500,7 @@ host/hash.i: host/hash.cu.i
 
 # target to preprocess a source file
 host/hash.cu.i:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/hash.cu.i
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/hash.cu.i
 .PHONY : host/hash.cu.i
 
 host/hash.s: host/hash.cu.s
@@ -436,7 +508,7 @@ host/hash.s: host/hash.cu.s
 
 # target to generate assembly for a file
 host/hash.cu.s:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/hash.cu.s
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/hash.cu.s
 .PHONY : host/hash.cu.s
 
 host/modulus.o: host/modulus.cu.o
@@ -444,7 +516,7 @@ host/modulus.o: host/modulus.cu.o
 
 # target to build an object file
 host/modulus.cu.o:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/modulus.cu.o
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/modulus.cu.o
 .PHONY : host/modulus.cu.o
 
 host/modulus.i: host/modulus.cu.i
@@ -452,7 +524,7 @@ host/modulus.i: host/modulus.cu.i
 
 # target to preprocess a source file
 host/modulus.cu.i:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/modulus.cu.i
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/modulus.cu.i
 .PHONY : host/modulus.cu.i
 
 host/modulus.s: host/modulus.cu.s
@@ -460,7 +532,7 @@ host/modulus.s: host/modulus.cu.s
 
 # target to generate assembly for a file
 host/modulus.cu.s:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/modulus.cu.s
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/modulus.cu.s
 .PHONY : host/modulus.cu.s
 
 host/ntt.o: host/ntt.cu.o
@@ -468,7 +540,7 @@ host/ntt.o: host/ntt.cu.o
 
 # target to build an object file
 host/ntt.cu.o:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/ntt.cu.o
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/ntt.cu.o
 .PHONY : host/ntt.cu.o
 
 host/ntt.i: host/ntt.cu.i
@@ -476,7 +548,7 @@ host/ntt.i: host/ntt.cu.i
 
 # target to preprocess a source file
 host/ntt.cu.i:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/ntt.cu.i
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/ntt.cu.i
 .PHONY : host/ntt.cu.i
 
 host/ntt.s: host/ntt.cu.s
@@ -484,7 +556,7 @@ host/ntt.s: host/ntt.cu.s
 
 # target to generate assembly for a file
 host/ntt.cu.s:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/ntt.cu.s
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/ntt.cu.s
 .PHONY : host/ntt.cu.s
 
 host/numth.o: host/numth.cu.o
@@ -492,7 +564,7 @@ host/numth.o: host/numth.cu.o
 
 # target to build an object file
 host/numth.cu.o:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/numth.cu.o
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/numth.cu.o
 .PHONY : host/numth.cu.o
 
 host/numth.i: host/numth.cu.i
@@ -500,7 +572,7 @@ host/numth.i: host/numth.cu.i
 
 # target to preprocess a source file
 host/numth.cu.i:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/numth.cu.i
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/numth.cu.i
 .PHONY : host/numth.cu.i
 
 host/numth.s: host/numth.cu.s
@@ -508,7 +580,7 @@ host/numth.s: host/numth.cu.s
 
 # target to generate assembly for a file
 host/numth.cu.s:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/numth.cu.s
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/numth.cu.s
 .PHONY : host/numth.cu.s
 
 host/rns.o: host/rns.cu.o
@@ -516,7 +588,7 @@ host/rns.o: host/rns.cu.o
 
 # target to build an object file
 host/rns.cu.o:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/rns.cu.o
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/rns.cu.o
 .PHONY : host/rns.cu.o
 
 host/rns.i: host/rns.cu.i
@@ -524,7 +596,7 @@ host/rns.i: host/rns.cu.i
 
 # target to preprocess a source file
 host/rns.cu.i:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/rns.cu.i
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/rns.cu.i
 .PHONY : host/rns.cu.i
 
 host/rns.s: host/rns.cu.s
@@ -532,7 +604,7 @@ host/rns.s: host/rns.cu.s
 
 # target to generate assembly for a file
 host/rns.cu.s:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/rns.cu.s
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/rns.cu.s
 .PHONY : host/rns.cu.s
 
 host/uintarith.o: host/uintarith.cu.o
@@ -540,7 +612,7 @@ host/uintarith.o: host/uintarith.cu.o
 
 # target to build an object file
 host/uintarith.cu.o:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/uintarith.cu.o
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/uintarith.cu.o
 .PHONY : host/uintarith.cu.o
 
 host/uintarith.i: host/uintarith.cu.i
@@ -548,7 +620,7 @@ host/uintarith.i: host/uintarith.cu.i
 
 # target to preprocess a source file
 host/uintarith.cu.i:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/uintarith.cu.i
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/uintarith.cu.i
 .PHONY : host/uintarith.cu.i
 
 host/uintarith.s: host/uintarith.cu.s
@@ -556,7 +628,7 @@ host/uintarith.s: host/uintarith.cu.s
 
 # target to generate assembly for a file
 host/uintarith.cu.s:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/uintarith.cu.s
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/uintarith.cu.s
 .PHONY : host/uintarith.cu.s
 
 host/uintarithmod.o: host/uintarithmod.cu.o
@@ -564,7 +636,7 @@ host/uintarithmod.o: host/uintarithmod.cu.o
 
 # target to build an object file
 host/uintarithmod.cu.o:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/uintarithmod.cu.o
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/uintarithmod.cu.o
 .PHONY : host/uintarithmod.cu.o
 
 host/uintarithmod.i: host/uintarithmod.cu.i
@@ -572,7 +644,7 @@ host/uintarithmod.i: host/uintarithmod.cu.i
 
 # target to preprocess a source file
 host/uintarithmod.cu.i:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/uintarithmod.cu.i
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/uintarithmod.cu.i
 .PHONY : host/uintarithmod.cu.i
 
 host/uintarithmod.s: host/uintarithmod.cu.s
@@ -580,7 +652,7 @@ host/uintarithmod.s: host/uintarithmod.cu.s
 
 # target to generate assembly for a file
 host/uintarithmod.cu.s:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/uintarithmod.cu.s
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/uintarithmod.cu.s
 .PHONY : host/uintarithmod.cu.s
 
 host/uintarithsmallmod.o: host/uintarithsmallmod.cu.o
@@ -588,7 +660,7 @@ host/uintarithsmallmod.o: host/uintarithsmallmod.cu.o
 
 # target to build an object file
 host/uintarithsmallmod.cu.o:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/uintarithsmallmod.cu.o
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/uintarithsmallmod.cu.o
 .PHONY : host/uintarithsmallmod.cu.o
 
 host/uintarithsmallmod.i: host/uintarithsmallmod.cu.i
@@ -596,7 +668,7 @@ host/uintarithsmallmod.i: host/uintarithsmallmod.cu.i
 
 # target to preprocess a source file
 host/uintarithsmallmod.cu.i:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/uintarithsmallmod.cu.i
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/uintarithsmallmod.cu.i
 .PHONY : host/uintarithsmallmod.cu.i
 
 host/uintarithsmallmod.s: host/uintarithsmallmod.cu.s
@@ -604,7 +676,7 @@ host/uintarithsmallmod.s: host/uintarithsmallmod.cu.s
 
 # target to generate assembly for a file
 host/uintarithsmallmod.cu.s:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/uintarithsmallmod.cu.s
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/host/uintarithsmallmod.cu.s
 .PHONY : host/uintarithsmallmod.cu.s
 
 ntt/fntt_2d.o: ntt/fntt_2d.cu.o
@@ -612,7 +684,7 @@ ntt/fntt_2d.o: ntt/fntt_2d.cu.o
 
 # target to build an object file
 ntt/fntt_2d.cu.o:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/ntt/fntt_2d.cu.o
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/ntt/fntt_2d.cu.o
 .PHONY : ntt/fntt_2d.cu.o
 
 ntt/fntt_2d.i: ntt/fntt_2d.cu.i
@@ -620,7 +692,7 @@ ntt/fntt_2d.i: ntt/fntt_2d.cu.i
 
 # target to preprocess a source file
 ntt/fntt_2d.cu.i:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/ntt/fntt_2d.cu.i
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/ntt/fntt_2d.cu.i
 .PHONY : ntt/fntt_2d.cu.i
 
 ntt/fntt_2d.s: ntt/fntt_2d.cu.s
@@ -628,7 +700,7 @@ ntt/fntt_2d.s: ntt/fntt_2d.cu.s
 
 # target to generate assembly for a file
 ntt/fntt_2d.cu.s:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/ntt/fntt_2d.cu.s
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/ntt/fntt_2d.cu.s
 .PHONY : ntt/fntt_2d.cu.s
 
 ntt/intt_2d.o: ntt/intt_2d.cu.o
@@ -636,7 +708,7 @@ ntt/intt_2d.o: ntt/intt_2d.cu.o
 
 # target to build an object file
 ntt/intt_2d.cu.o:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/ntt/intt_2d.cu.o
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/ntt/intt_2d.cu.o
 .PHONY : ntt/intt_2d.cu.o
 
 ntt/intt_2d.i: ntt/intt_2d.cu.i
@@ -644,7 +716,7 @@ ntt/intt_2d.i: ntt/intt_2d.cu.i
 
 # target to preprocess a source file
 ntt/intt_2d.cu.i:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/ntt/intt_2d.cu.i
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/ntt/intt_2d.cu.i
 .PHONY : ntt/intt_2d.cu.i
 
 ntt/intt_2d.s: ntt/intt_2d.cu.s
@@ -652,7 +724,7 @@ ntt/intt_2d.s: ntt/intt_2d.cu.s
 
 # target to generate assembly for a file
 ntt/intt_2d.cu.s:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/ntt/intt_2d.cu.s
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/ntt/intt_2d.cu.s
 .PHONY : ntt/intt_2d.cu.s
 
 ntt/ntt_1d.o: ntt/ntt_1d.cu.o
@@ -660,7 +732,7 @@ ntt/ntt_1d.o: ntt/ntt_1d.cu.o
 
 # target to build an object file
 ntt/ntt_1d.cu.o:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/ntt/ntt_1d.cu.o
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/ntt/ntt_1d.cu.o
 .PHONY : ntt/ntt_1d.cu.o
 
 ntt/ntt_1d.i: ntt/ntt_1d.cu.i
@@ -668,7 +740,7 @@ ntt/ntt_1d.i: ntt/ntt_1d.cu.i
 
 # target to preprocess a source file
 ntt/ntt_1d.cu.i:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/ntt/ntt_1d.cu.i
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/ntt/ntt_1d.cu.i
 .PHONY : ntt/ntt_1d.cu.i
 
 ntt/ntt_1d.s: ntt/ntt_1d.cu.s
@@ -676,7 +748,7 @@ ntt/ntt_1d.s: ntt/ntt_1d.cu.s
 
 # target to generate assembly for a file
 ntt/ntt_1d.cu.s:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/ntt/ntt_1d.cu.s
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/ntt/ntt_1d.cu.s
 .PHONY : ntt/ntt_1d.cu.s
 
 ntt/ntt_keyswitch_old.o: ntt/ntt_keyswitch_old.cu.o
@@ -684,7 +756,7 @@ ntt/ntt_keyswitch_old.o: ntt/ntt_keyswitch_old.cu.o
 
 # target to build an object file
 ntt/ntt_keyswitch_old.cu.o:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/ntt/ntt_keyswitch_old.cu.o
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/ntt/ntt_keyswitch_old.cu.o
 .PHONY : ntt/ntt_keyswitch_old.cu.o
 
 ntt/ntt_keyswitch_old.i: ntt/ntt_keyswitch_old.cu.i
@@ -692,7 +764,7 @@ ntt/ntt_keyswitch_old.i: ntt/ntt_keyswitch_old.cu.i
 
 # target to preprocess a source file
 ntt/ntt_keyswitch_old.cu.i:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/ntt/ntt_keyswitch_old.cu.i
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/ntt/ntt_keyswitch_old.cu.i
 .PHONY : ntt/ntt_keyswitch_old.cu.i
 
 ntt/ntt_keyswitch_old.s: ntt/ntt_keyswitch_old.cu.s
@@ -700,7 +772,7 @@ ntt/ntt_keyswitch_old.s: ntt/ntt_keyswitch_old.cu.s
 
 # target to generate assembly for a file
 ntt/ntt_keyswitch_old.cu.s:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/ntt/ntt_keyswitch_old.cu.s
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/ntt/ntt_keyswitch_old.cu.s
 .PHONY : ntt/ntt_keyswitch_old.cu.s
 
 ntt/ntt_moddown.o: ntt/ntt_moddown.cu.o
@@ -708,7 +780,7 @@ ntt/ntt_moddown.o: ntt/ntt_moddown.cu.o
 
 # target to build an object file
 ntt/ntt_moddown.cu.o:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/ntt/ntt_moddown.cu.o
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/ntt/ntt_moddown.cu.o
 .PHONY : ntt/ntt_moddown.cu.o
 
 ntt/ntt_moddown.i: ntt/ntt_moddown.cu.i
@@ -716,7 +788,7 @@ ntt/ntt_moddown.i: ntt/ntt_moddown.cu.i
 
 # target to preprocess a source file
 ntt/ntt_moddown.cu.i:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/ntt/ntt_moddown.cu.i
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/ntt/ntt_moddown.cu.i
 .PHONY : ntt/ntt_moddown.cu.i
 
 ntt/ntt_moddown.s: ntt/ntt_moddown.cu.s
@@ -724,7 +796,7 @@ ntt/ntt_moddown.s: ntt/ntt_moddown.cu.s
 
 # target to generate assembly for a file
 ntt/ntt_moddown.cu.s:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/ntt/ntt_moddown.cu.s
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/ntt/ntt_moddown.cu.s
 .PHONY : ntt/ntt_moddown.cu.s
 
 ntt/ntt_modup.o: ntt/ntt_modup.cu.o
@@ -732,7 +804,7 @@ ntt/ntt_modup.o: ntt/ntt_modup.cu.o
 
 # target to build an object file
 ntt/ntt_modup.cu.o:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/ntt/ntt_modup.cu.o
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/ntt/ntt_modup.cu.o
 .PHONY : ntt/ntt_modup.cu.o
 
 ntt/ntt_modup.i: ntt/ntt_modup.cu.i
@@ -740,7 +812,7 @@ ntt/ntt_modup.i: ntt/ntt_modup.cu.i
 
 # target to preprocess a source file
 ntt/ntt_modup.cu.i:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/ntt/ntt_modup.cu.i
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/ntt/ntt_modup.cu.i
 .PHONY : ntt/ntt_modup.cu.i
 
 ntt/ntt_modup.s: ntt/ntt_modup.cu.s
@@ -748,7 +820,7 @@ ntt/ntt_modup.s: ntt/ntt_modup.cu.s
 
 # target to generate assembly for a file
 ntt/ntt_modup.cu.s:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/ntt/ntt_modup.cu.s
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/ntt/ntt_modup.cu.s
 .PHONY : ntt/ntt_modup.cu.s
 
 polymath.o: polymath.cu.o
@@ -756,7 +828,7 @@ polymath.o: polymath.cu.o
 
 # target to build an object file
 polymath.cu.o:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/polymath.cu.o
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/polymath.cu.o
 .PHONY : polymath.cu.o
 
 polymath.i: polymath.cu.i
@@ -764,7 +836,7 @@ polymath.i: polymath.cu.i
 
 # target to preprocess a source file
 polymath.cu.i:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/polymath.cu.i
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/polymath.cu.i
 .PHONY : polymath.cu.i
 
 polymath.s: polymath.cu.s
@@ -772,7 +844,7 @@ polymath.s: polymath.cu.s
 
 # target to generate assembly for a file
 polymath.cu.s:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/polymath.cu.s
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/polymath.cu.s
 .PHONY : polymath.cu.s
 
 prng.o: prng.cu.o
@@ -780,7 +852,7 @@ prng.o: prng.cu.o
 
 # target to build an object file
 prng.cu.o:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/prng.cu.o
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/prng.cu.o
 .PHONY : prng.cu.o
 
 prng.i: prng.cu.i
@@ -788,7 +860,7 @@ prng.i: prng.cu.i
 
 # target to preprocess a source file
 prng.cu.i:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/prng.cu.i
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/prng.cu.i
 .PHONY : prng.cu.i
 
 prng.s: prng.cu.s
@@ -796,7 +868,7 @@ prng.s: prng.cu.s
 
 # target to generate assembly for a file
 prng.cu.s:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/prng.cu.s
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/prng.cu.s
 .PHONY : prng.cu.s
 
 rns.o: rns.cu.o
@@ -804,7 +876,7 @@ rns.o: rns.cu.o
 
 # target to build an object file
 rns.cu.o:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/rns.cu.o
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/rns.cu.o
 .PHONY : rns.cu.o
 
 rns.i: rns.cu.i
@@ -812,7 +884,7 @@ rns.i: rns.cu.i
 
 # target to preprocess a source file
 rns.cu.i:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/rns.cu.i
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/rns.cu.i
 .PHONY : rns.cu.i
 
 rns.s: rns.cu.s
@@ -820,7 +892,7 @@ rns.s: rns.cu.s
 
 # target to generate assembly for a file
 rns.cu.s:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/rns.cu.s
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/rns.cu.s
 .PHONY : rns.cu.s
 
 rns_base.o: rns_base.cu.o
@@ -828,7 +900,7 @@ rns_base.o: rns_base.cu.o
 
 # target to build an object file
 rns_base.cu.o:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/rns_base.cu.o
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/rns_base.cu.o
 .PHONY : rns_base.cu.o
 
 rns_base.i: rns_base.cu.i
@@ -836,7 +908,7 @@ rns_base.i: rns_base.cu.i
 
 # target to preprocess a source file
 rns_base.cu.i:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/rns_base.cu.i
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/rns_base.cu.i
 .PHONY : rns_base.cu.i
 
 rns_base.s: rns_base.cu.s
@@ -844,7 +916,7 @@ rns_base.s: rns_base.cu.s
 
 # target to generate assembly for a file
 rns_base.cu.s:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/rns_base.cu.s
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/rns_base.cu.s
 .PHONY : rns_base.cu.s
 
 rns_bconv.o: rns_bconv.cu.o
@@ -852,7 +924,7 @@ rns_bconv.o: rns_bconv.cu.o
 
 # target to build an object file
 rns_bconv.cu.o:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/rns_bconv.cu.o
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/rns_bconv.cu.o
 .PHONY : rns_bconv.cu.o
 
 rns_bconv.i: rns_bconv.cu.i
@@ -860,7 +932,7 @@ rns_bconv.i: rns_bconv.cu.i
 
 # target to preprocess a source file
 rns_bconv.cu.i:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/rns_bconv.cu.i
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/rns_bconv.cu.i
 .PHONY : rns_bconv.cu.i
 
 rns_bconv.s: rns_bconv.cu.s
@@ -868,7 +940,7 @@ rns_bconv.s: rns_bconv.cu.s
 
 # target to generate assembly for a file
 rns_bconv.cu.s:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/rns_bconv.cu.s
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/rns_bconv.cu.s
 .PHONY : rns_bconv.cu.s
 
 scalingvariant.o: scalingvariant.cu.o
@@ -876,7 +948,7 @@ scalingvariant.o: scalingvariant.cu.o
 
 # target to build an object file
 scalingvariant.cu.o:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/scalingvariant.cu.o
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/scalingvariant.cu.o
 .PHONY : scalingvariant.cu.o
 
 scalingvariant.i: scalingvariant.cu.i
@@ -884,7 +956,7 @@ scalingvariant.i: scalingvariant.cu.i
 
 # target to preprocess a source file
 scalingvariant.cu.i:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/scalingvariant.cu.i
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/scalingvariant.cu.i
 .PHONY : scalingvariant.cu.i
 
 scalingvariant.s: scalingvariant.cu.s
@@ -892,7 +964,7 @@ scalingvariant.s: scalingvariant.cu.s
 
 # target to generate assembly for a file
 scalingvariant.cu.s:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/scalingvariant.cu.s
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/scalingvariant.cu.s
 .PHONY : scalingvariant.cu.s
 
 secretkey.o: secretkey.cu.o
@@ -900,7 +972,7 @@ secretkey.o: secretkey.cu.o
 
 # target to build an object file
 secretkey.cu.o:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/secretkey.cu.o
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/secretkey.cu.o
 .PHONY : secretkey.cu.o
 
 secretkey.i: secretkey.cu.i
@@ -908,7 +980,7 @@ secretkey.i: secretkey.cu.i
 
 # target to preprocess a source file
 secretkey.cu.i:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/secretkey.cu.i
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/secretkey.cu.i
 .PHONY : secretkey.cu.i
 
 secretkey.s: secretkey.cu.s
@@ -916,8 +988,32 @@ secretkey.s: secretkey.cu.s
 
 # target to generate assembly for a file
 secretkey.cu.s:
-	cd /home/sandia/codex/phantom-fhe/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/secretkey.cu.s
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/secretkey.cu.s
 .PHONY : secretkey.cu.s
+
+util.o: util.cu.o
+.PHONY : util.o
+
+# target to build an object file
+util.cu.o:
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/util.cu.o
+.PHONY : util.cu.o
+
+util.i: util.cu.i
+.PHONY : util.i
+
+# target to preprocess a source file
+util.cu.i:
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/util.cu.i
+.PHONY : util.cu.i
+
+util.s: util.cu.s
+.PHONY : util.s
+
+# target to generate assembly for a file
+util.cu.s:
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Phantom.dir/build.make src/CMakeFiles/Phantom.dir/util.cu.s
+.PHONY : util.cu.s
 
 # Help Target
 help:
@@ -935,12 +1031,21 @@ help:
 	@echo "... batchencoder.o"
 	@echo "... batchencoder.i"
 	@echo "... batchencoder.s"
+	@echo "... bootstrap.o"
+	@echo "... bootstrap.i"
+	@echo "... bootstrap.s"
 	@echo "... ckks.o"
 	@echo "... ckks.i"
 	@echo "... ckks.s"
 	@echo "... context.o"
 	@echo "... context.i"
 	@echo "... context.s"
+	@echo "... convolution.o"
+	@echo "... convolution.i"
+	@echo "... convolution.s"
+	@echo "... dnn.o"
+	@echo "... dnn.i"
+	@echo "... dnn.s"
 	@echo "... eval_key_switch.o"
 	@echo "... eval_key_switch.i"
 	@echo "... eval_key_switch.s"
@@ -1025,6 +1130,9 @@ help:
 	@echo "... secretkey.o"
 	@echo "... secretkey.i"
 	@echo "... secretkey.s"
+	@echo "... util.o"
+	@echo "... util.i"
+	@echo "... util.s"
 .PHONY : help
 
 
@@ -1036,6 +1144,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/sandia/codex/phantom-fhe/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/sandia/codex/phantom-fhe-bootstrapping/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

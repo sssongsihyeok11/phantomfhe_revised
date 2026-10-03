@@ -41,37 +41,17 @@ cd phantom-fhe-bootstrapping
 
 Run all subsequent commands from the repository root. If you already have the source, change to that directory.
 
-## 3. Build the C++ library and bootstrapping example
+## 3. Build C++ and Python together
+
+Use one `build` directory for the shared library, C++ bootstrapping executable,
+and Python extension. Activate your Python environment before configuring.
+The bindings use `python/pybind11`; if it is missing, run
+`git submodule update --init --recursive`. The coefficient example requires NumPy:
 
 ```bash
-cmake -S . -B build-bootstrap \
-  -DCMAKE_BUILD_TYPE=Release \
-  -DCMAKE_CUDA_ARCHITECTURES=native \
-  -DPHANTOM_ENABLE_BOOTSTRAP=ON \
-  -DPHANTOM_ENABLE_EXAMPLE=OFF \
-  -DPHANTOM_ENABLE_BENCH=OFF \
-  -DPHANTOM_ENABLE_TEST=OFF \
-  -DPHANTOM_ENABLE_PYTHON_BINDING=OFF
+python -m pip install numpy
 
-cmake --build build-bootstrap --target bootstrap -j 4
-```
-
-Build outputs:
-
-- `build-bootstrap/lib/libPhantom.so`: shared library
-- `build-bootstrap/bin/bootstrap`: C++ bootstrapping executable
-
-You can run the example directly from the build directory without installing it system-wide. See [Running the C++ example](RUNNING.md#cpp).
-
-## 4. Build the Python bindings (optional)
-
-The bindings use the source in `python/pybind11`. Make sure `python/pybind11/CMakeLists.txt` exists. If your checkout tracks this directory as a submodule and the file is missing, run `git submodule update --init --recursive`.
-
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-
-cmake -S . -B build-python \
+cmake -S . -B build \
   -DCMAKE_BUILD_TYPE=Release \
   -DCMAKE_CUDA_ARCHITECTURES=native \
   -DPHANTOM_ENABLE_BOOTSTRAP=ON \
@@ -79,21 +59,28 @@ cmake -S . -B build-python \
   -DPHANTOM_ENABLE_BENCH=OFF \
   -DPHANTOM_ENABLE_TEST=OFF \
   -DPHANTOM_ENABLE_PYTHON_BINDING=ON \
-  -DPYTHON_EXECUTABLE="$(command -v python)" \
-  -DPython_EXECUTABLE="$(command -v python)"
+  -DPYTHON_EXECUTABLE="$(command -v python)"
 
-cmake --build build-python --target pyPhantom -j 4
+cmake --build build -j 4
 ```
 
-The build places the `pyPhantom` extension and `libPhantom.so` in `build-python/lib`. The example requires no additional Python packages beyond the extension and the Python standard library.
+Build outputs:
+
+- `build/lib/libPhantom.so`: shared library
+- `build/bin/bootstrap`: C++ bootstrapping executable
+- `build/lib/pyPhantom*.so`: Python extension
+
+You can run the example directly from the build directory without installing it system-wide. See [Running the C++ example](RUNNING.md#cpp).
+
+## 4. Use the Python bindings
 
 Set the module and library paths, then verify the import. Activate the environment and set these paths again when opening a new terminal.
 
 ```bash
-source .venv/bin/activate
-export PYTHONPATH="$PWD/build-python/lib${PYTHONPATH:+:$PYTHONPATH}"
-export LD_LIBRARY_PATH="$PWD/build-python/lib${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
+export PYTHONPATH="$PWD/build/lib${PYTHONPATH:+:$PYTHONPATH}"
+export LD_LIBRARY_PATH="$PWD/build/lib${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
 python -c "import pyPhantom; print(pyPhantom.__file__)"
+python python/examples/ckks_coefficient_Test.py
 ```
 
 See [Running the Python example](RUNNING.md#python) to execute bootstrapping.
@@ -104,7 +91,8 @@ See [Running the Python example](RUNNING.md#python) to execute bootstrapping.
 - **GPU architecture detection fails:** Configure on a machine where the GPU is visible, or replace `-DCMAKE_CUDA_ARCHITECTURES=native` with the target GPU's architecture number. The installed Toolkit must support that architecture.
 - **Out of memory during compilation:** Reduce build parallelism to `-j 2` or `-j 1`.
 - **Missing Python headers or pybind11:** Check that Python development headers and `python/pybind11/CMakeLists.txt` are present.
-- **Changed compiler or Python environment:** Configure in a new build directory to avoid reusing an incompatible CMake cache.
+- **Changed compiler, source location, or Python environment:** Reconfigure the same directory with `cmake --fresh -S . -B build` and the options above (requires CMake 3.24 or later).
+- **CUDA 12.0 reports `__builtin_dynamic_object_size` errors:** Add `-DCMAKE_CUDA_FLAGS="-U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=2"` to the configure command.
 
 ## License
 
@@ -157,4 +145,3 @@ If you are exploring BFV optimizations, please also cite the following paper:
     doi={10.1109/TC.2024.3457733},
 }
 ```
-

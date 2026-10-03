@@ -3,11 +3,17 @@ file(REMOVE_RECURSE
   "../lib/libPhantom.so"
   "CMakeFiles/Phantom.dir/batchencoder.cu.o"
   "CMakeFiles/Phantom.dir/batchencoder.cu.o.d"
+  "CMakeFiles/Phantom.dir/bootstrap.cu.o"
+  "CMakeFiles/Phantom.dir/bootstrap.cu.o.d"
   "CMakeFiles/Phantom.dir/ckks.cu.o"
   "CMakeFiles/Phantom.dir/ckks.cu.o.d"
   "CMakeFiles/Phantom.dir/cmake_device_link.o"
   "CMakeFiles/Phantom.dir/context.cu.o"
   "CMakeFiles/Phantom.dir/context.cu.o.d"
+  "CMakeFiles/Phantom.dir/convolution.cu.o"
+  "CMakeFiles/Phantom.dir/convolution.cu.o.d"
+  "CMakeFiles/Phantom.dir/dnn.cu.o"
+  "CMakeFiles/Phantom.dir/dnn.cu.o.d"
   "CMakeFiles/Phantom.dir/eval_key_switch.cu.o"
   "CMakeFiles/Phantom.dir/eval_key_switch.cu.o.d"
   "CMakeFiles/Phantom.dir/evaluate.cu.o"
@@ -64,6 +70,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Phantom.dir/scalingvariant.cu.o.d"
   "CMakeFiles/Phantom.dir/secretkey.cu.o"
   "CMakeFiles/Phantom.dir/secretkey.cu.o.d"
+  "CMakeFiles/Phantom.dir/util.cu.o"
+  "CMakeFiles/Phantom.dir/util.cu.o.d"
 )
 
 # Per-language clean rules from dependency scanning.
